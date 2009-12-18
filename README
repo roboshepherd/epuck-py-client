@@ -1,0 +1,9 @@
+Epuck Python Client for Newport's Communication Experiments
+============================================================
+Based on Epuck BTCOM (selector pose 3), Python2.6 multi-processing-
+5 submodules are planned:
+- DeviceController (Myro 2.8.16 E-puck Programming Interface)
+- PoseUpdater (listen to DBus RobotPose signal from SwisTrack D-Bus Server Component)
+- TaskInfoUpdater (listen to DBus TaskInfo signal from SwisTrack D-Bus Server Component)
+- TaskSelector (Based on Attractive Field Model)
+- DataLogger (To plot in LiveGraph)
