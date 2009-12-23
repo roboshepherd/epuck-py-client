@@ -24,3 +24,15 @@ MAX_THETA = (2* pi)
 TASK_RADIUS = 100 #pixel
 TASK_CONE_ANGLE = 0.26 #15deg
 MAX_NAV_STEP = 1 #how long navigation continues
+# angles
+REVERSE_ANGLE1 = 2.90 
+REVERSE_ANGLE2  = 1.52
+DELTA_ANGLE1  = 0.26
+DELTA_ANGLE0 =  0.26
+ 
+ANGLE30  = pi/6
+ANGLE90  = pi/2
+ANGLE180 = pi
+ANGLE270  = 3.0 * pi/2
+ANGLE360  =  2.0 * pi
+
