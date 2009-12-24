@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project EpuckPyClient -->
-<!-- Saved: 2009-12-23, 11:48:28 -->
+<!-- Saved: 2009-12-24, 11:30:48 -->
 <!-- Copyright (C) 2009 M O Faruque Sarker, writefaruq@gmail.com -->
 <Project version="4.6">
   <Language>en</Language>
@@ -12,10 +12,8 @@
   <Author>M O Faruque Sarker</Author>
   <Email>writefaruq@gmail.com</Email>
   <Sources>
-    <Source>src/Pose.py</Source>
     <Source>src/EpuckPyClient.py</Source>
-    <Source>src/EpuckNavigator.py</Source>
-    <Source>EpuckPyClient.py</Source>
+    <Source>src/data_manager.py</Source>
   </Sources>
   <Forms>
   </Forms>

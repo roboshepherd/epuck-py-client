@@ -1,4 +1,7 @@
 from math import pi
+#D-Bus Config
+DBUS_IFACE = "uk.ac.newport.ril.RobotTracker"
+DBUS_PATH = "/robot1"
 
 #RIL and AFM params
 MAXSHOPTASK = 3
