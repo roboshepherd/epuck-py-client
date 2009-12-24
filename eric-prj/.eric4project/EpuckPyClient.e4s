@@ -2,17 +2,16 @@
 <!DOCTYPE Session SYSTEM "Session-4.3.dtd">
 <!-- eric4 session file for project EpuckPyClient -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2009-12-24, 11:30:48 -->
+<!-- Saved: 2009-12-24, 13:13:43 -->
 <Session version="4.3">
   <Filenames>
-    <Filename cline="21" cindex="32" folds="">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</Filename>
-    <Filename cline="204" cindex="12" folds="">/home/omar/epuck-py-client/eric-prj/src/epuck_navigator.py</Filename>
-    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/pose.py</Filename>
-    <Filename cline="6" cindex="97" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
+    <Filename cline="24" cindex="22" folds="">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</Filename>
+    <Filename cline="3" cindex="39" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
     <Filename cline="5" cindex="19" folds="">/home/omar/epuck-py-client/eric-prj/src/RILSetup.py</Filename>
-    <Filename cline="42" cindex="19" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_server.py</Filename>
+    <Filename cline="6" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_server.py</Filename>
+    <Filename cline="32" cindex="9" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_comm_handler.py</Filename>
   </Filenames>
-  <ActiveWindow cline="42" cindex="19">/home/omar/epuck-py-client/eric-prj/src/dbus_server.py</ActiveWindow>
+  <ActiveWindow cline="24" cindex="22">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchexpressions>
