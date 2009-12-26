@@ -4,25 +4,22 @@ import gobject, dbus, dbus.service, dbus.mainloop.glib
 import multiprocessing,  logging
 from RILSetup import DBUS_IFACE,  DBUS_PATH
 from task_info import *
-
+from pose import *
 
 schedule = sched.scheduler(time.time, time.sleep)
-posets = time.time()
-posex = 300
-posey = 200
-posetheta = 2.0
+pose = Pose(x=300,  y=200,  theta=2.5).all
 taskinfo = TaskInfo(2).all
 
 class TrackerSignal(dbus.service.Object):
     def __init__(self, object_path):
         dbus.service.Object.__init__(self, dbus.SessionBus(), object_path)
         #global taskinfo
-    @dbus.service.signal(dbus_interface= DBUS_IFACE, signature='sdddd')
-    def RobotPose(self, sig,  ts,  x,  y,  theta):
+    @dbus.service.signal(dbus_interface= DBUS_IFACE, signature='sad')
+    def RobotPose(self, sig,  pose):
         # The signal is emitted when this method exits
         #pass
         print "Tracker signal: %s" %sig
-        print" %0.2f, %.2f, %.2f, %.2f " %  (ts,  x,  y,  theta)
+        print pose
     @dbus.service.signal(dbus_interface= DBUS_IFACE, signature='sa{iad}')
     def TaskInfo(self, sig,  taskinfo):
         # The signal is emitted when this method exits
@@ -35,14 +32,14 @@ class TrackerSignal(dbus.service.Object):
 def emit_tracker_signal(sig,  inc):
     print "At emit_tracker_signal():"
     #taskinfo.Print()
-    global tracker_signal,  posets,  posex,  posey,  posetheta,  taskinfo
+    global tracker_signal,  pose,  taskinfo
     schedule.enter(inc, 0, emit_tracker_signal, (sig,  inc)) # re-schedule to repeat this function
     print "\tEmitting signal>>> " 
     #taskinfo.Print()
     tracker_signal.TaskInfo("TaskInfo",  taskinfo)
-    tracker_signal.RobotPose(sig,  posets,  posex,  posey,  posetheta)
+    tracker_signal.RobotPose(sig,  pose)
 
-def server_main(dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH,  sig = "RobotState", delay = 1):
+def server_main(dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH,  sig = "RobotPose", delay = 1):
     dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
     session_bus = dbus.SessionBus()
     global tracker_signal,  taskinfo

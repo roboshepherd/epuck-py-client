@@ -32,7 +32,7 @@ def main_loop():
         pass
         sys.exit(0)
 
-def client_main(data_mgr,  dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH,  sig = "RobotState"):
+def client_main(data_mgr,  dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH,  sig = "RobotPose"):
         global datamgr_proxy
         datamgr_proxy = data_mgr
         dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)

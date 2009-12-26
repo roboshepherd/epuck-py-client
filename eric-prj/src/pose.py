@@ -1,6 +1,10 @@
 #!/usr/bin/python
-
+import time
 class  Pose:
-    x = 0.0
-    y = 0.0
-    theta = 0.0
+    all = []
+    def __init__(self,  ts=time.time(),  x=0,  y=0,  theta=0):
+        self.ts = ts
+        self.x = x 
+        self.y = y 
+        self.theta = theta
+        self.all = [ts,  x,  y,  theta]
