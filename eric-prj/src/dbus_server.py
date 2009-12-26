@@ -29,17 +29,18 @@ class TrackerSignal(dbus.service.Object):
         loop.quit()
 
 #Emit DBus-Signal
-def emit_tracker_signal(sig,  inc):
+def emit_tracker_signal(sig1, sig2,   inc):
     print "At emit_tracker_signal():"
     #taskinfo.Print()
     global tracker_signal,  pose,  taskinfo
-    schedule.enter(inc, 0, emit_tracker_signal, (sig,  inc)) # re-schedule to repeat this function
+    schedule.enter(inc, 0, emit_tracker_signal, (sig1, sig2,   inc)) # re-schedule to repeat this function
     print "\tEmitting signal>>> " 
-    #taskinfo.Print()
-    tracker_signal.TaskInfo("TaskInfo",  taskinfo)
-    tracker_signal.RobotPose(sig,  pose)
+    tracker_signal.RobotPose(sig1,  pose)
+    tracker_signal.TaskInfo(sig2,  taskinfo)
 
-def server_main(dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH,  sig = "RobotPose", delay = 1):
+
+def server_main(dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH, \
+                sig1 = "RobotPose", sig2= "TaskInfo",  delay = 1):
     dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
     session_bus = dbus.SessionBus()
     global tracker_signal,  taskinfo
@@ -52,7 +53,7 @@ def server_main(dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH,  sig = "RobotPos
         traceback.print_exc()
         sys.exit(1)
     try:
-            e = schedule.enter(0, 0, emit_tracker_signal, (sig,  delay,  ))
+            e = schedule.enter(0, 0, emit_tracker_signal, (sig1,  sig2,  delay,  ))
             schedule.run()
             loop.run()
     except (KeyboardInterrupt, dbus.DBusException, SystemExit):
