@@ -7,14 +7,6 @@ import multiprocessing,  logging
 from RILSetup import DBUS_IFACE,  DBUS_PATH
 from data_manager import *
 
-#def extract_objects(object_list):
-#	list = "["
-#	for object in object_list:
-#		val = str(object)
-#		list = list + val + " , "
-#	list = list + "]"
-#	return list
-
 def extract_objects(object_list):
 	list = []
 	for object in object_list:
@@ -29,16 +21,19 @@ def save_pose(pose_val):
         datamgr_proxy.mRobotPose = []
         datamgr_proxy.mRobotPose = extract_objects(pose_val)
         print datamgr_proxy.mRobotPose
-        print "Len:" ,  len(datamgr_proxy.mRobotPose)
+        #print "Len:" ,  len(datamgr_proxy.mRobotPose)
     except:
        print "Err in save_pose()"
 
-def save_taskinfo(key,  taskinfo):
+def save_taskinfo(taskinfo):
     global datamgr_proxy
     try:
         datamgr_proxy.mTaskInfo.clear()
-        datamgr_proxy.mTaskInfo = taskinfo.copy()
-        #print datamgr_proxy.mTaskInfo
+        for k, v in taskinfo.iteritems():
+            key = eval(str(k))
+            value = extract_objects(v)
+            datamgr_proxy.mTaskInfo[key] = value 
+        print datamgr_proxy.mTaskInfo
     except:
        print "Err in save_taskinfo()"
 
@@ -50,9 +45,8 @@ def pose_signal_handler( sig,  val):
 def taskinfo_signal_handler( sig,  val):
     print "Caught signal  %s (in taskinfo signal handler) "  %(sig)
     #print "Val: ",  val
-    save_taskinfo(iter,  val)
+    save_taskinfo(val)
  
-
 def main_loop():
     try:
         loop = gobject.MainLoop()

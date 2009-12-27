@@ -8,7 +8,14 @@ from pose import *
 
 schedule = sched.scheduler(time.time, time.sleep)
 pose = Pose(x=300,  y=200,  theta=2.5).all
-taskinfo = TaskInfo(2).all
+ti = TaskInfo()
+task0 = Task(id =0,  x=900,  y=1000)
+task1 = Task(id=1,  x=100,  y=100)
+task2 = Task(id=2,  x=1500,  y=1200)
+ti.AddTaskInfo(0,  task0.Info())
+ti.AddTaskInfo(1,  task1.Info()) 
+ti.AddTaskInfo(2,  task2.Info())
+taskinfo = ti.all
 
 class TrackerSignal(dbus.service.Object):
     def __init__(self, object_path):
