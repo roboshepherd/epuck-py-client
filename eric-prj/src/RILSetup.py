@@ -39,3 +39,25 @@ ANGLE180 = pi
 ANGLE270  = 3.0 * pi/2
 ANGLE360  =  2.0 * pi
 
+# Robot Device States
+#/* Connectivity states */
+NOTSET = -100
+#/* state as (- id) e.g. UNAVAILABLE = - id
+#UNAVAILABLE state of Robot 5 = - 5*/
+UNAVAILABLE = -50
+#/* state as (+ id) e.g. AVAILABLE = state + id
+#AVAILABLE state of Robot 5 = 5*/
+AVAILABLE = 0
+#/* task states, set state as (this value+id) e.g. RW = 50 + id*/
+RW = 50
+TASK = 99 #/* seldom used */
+TASK1 = 100
+TASK2 = 200
+TASK3 = 300
+TASK4 = 400
+TASK5 = 500
+TASK6 = 600
+TASK7 = 700
+TASK8 = 800
+TASK9 = 900
+TASK10 = 1000

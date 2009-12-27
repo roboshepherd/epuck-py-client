@@ -1,6 +1,6 @@
 import time
 
-from task import *
+from shop_task import *
 
 class TaskInfo:
     """Returns a dict with  taskinfo """
