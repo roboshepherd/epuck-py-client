@@ -26,7 +26,6 @@ class TaskSelector():
         stimuli = tanh(learn * urgency / ( dist + deltadist))
         return stimuli
 
-    
     def CalculateProbabilities(self):
         r = self.robot
         ti = self.taskinfo
@@ -42,4 +41,5 @@ class TaskSelector():
             r.taskrec(taskid).sensitization = learn
             r.taskrec(taskid).dist = dist
             r.taskrec(taskid).stimuli = stimuli
-            
+        sum = fsum(self.stimulus)
+        

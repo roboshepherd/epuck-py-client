@@ -1,0 +1,6 @@
+2009-12-28 18:39:33,423 - EpcLogger - DEBUG -  RIL_dbus_server Starting
+2009-12-28 18:39:33,467 - EpcLogger - DEBUG -  RIL_dbus_client Starting
+2009-12-28 18:39:36,461 - EpcLogger - INFO - Len logged: 4
+2009-12-28 18:39:39,465 - EpcLogger - INFO - Len logged: 4
+2009-12-28 18:39:42,461 - EpcLogger - INFO - Len logged: 4
+2009-12-28 18:39:45,479 - EpcLogger - INFO - Len logged: 4

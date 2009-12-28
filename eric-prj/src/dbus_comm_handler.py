@@ -1,6 +1,9 @@
 import time, os, sys, sched, subprocess, re, signal, traceback
 import gobject, dbus, dbus.service, dbus.mainloop.glib 
-import multiprocessing,  logging
+import multiprocessing,  logging,  logging.config
+
+logging.config.fileConfig("logging.conf")
+logger = logging.getLogger("EpcLogger")
 
 #from dbus.introspect_parser import process_introspection_data
 
@@ -21,7 +24,7 @@ def save_pose(pose_val):
         datamgr_proxy.mRobotPose = []
         datamgr_proxy.mRobotPose = extract_objects(pose_val)
         print datamgr_proxy.mRobotPose
-        #print "Len:" ,  len(datamgr_proxy.mRobotPose)
+        logger.info("Len logged: %d" ,  len(datamgr_proxy.mRobotPose))
     except:
        print "Err in save_pose()"
 

@@ -1,5 +1,10 @@
 #!/usr/bin/python
-import multiprocessing,  logging,  time
+import multiprocessing,  logging,  logging.config,  logging.handlers,  time
+
+logging.config.fileConfig("logging.conf")
+#create logger
+logger = logging.getLogger("EpcLogger")
+
 from RILSetup import *
 from data_manager import *
 from dbus_server import *
@@ -15,13 +20,14 @@ multiprocessing.log_to_stderr(logging.DEBUG)
 def server_proc(dbus_iface,  dbus_path,  sig1, sig2,  delay):
     """Emits DBus signal RobotPose and TaskInfo """
     name = multiprocessing.current_process().name
-    print name, 'Starting'
+    logger.debug (' %s Starting',  name)
     server_main(dbus_iface,  dbus_path,  sig1, sig2,  delay)
 
 def client_proc(data_mgr,  dbus_iface,  dbus_path,  sig1,  sig2):
     """Catches DBus signal RobotPose and TaskInfo  and saves into DataManager"""
     name = multiprocessing.current_process().name
-    print name, 'Starting'
+    logger.debug (' %s Starting',  name)
+    #print name, 'Starting'
     client_main(data_mgr,  dbus_iface,  dbus_path,  sig1,  sig2)
 
 if __name__ == '__main__':
