@@ -7,41 +7,40 @@ logger = logging.getLogger("EpcLogger")
 
 from RILSetup import *
 from data_manager import *
-from dbus_server import *
-from dbus_comm_handler import *
-
+from ril_robot import *
+import dbus_server
+import dbus_comm_handler 
+import task_selector
 multiprocessing.log_to_stderr(logging.DEBUG)
 
-#def main():
-#    print "--- Start test---"
-#    time.sleep(10)
-#    print "--- End test---"
+def main():
+        logging.debug("--- Start EPC---")
+        dbus_server.start()
+        dbus_client.start()
+        taskselector.start()
+        # Ending....
+        time.sleep(10)
+        dbus_server.join()
+        dbus_client.join()
+        taskselector.join()
+        logging.debug("--- End EPC---")
 
-def server_proc(dbus_iface,  dbus_path,  sig1, sig2,  delay):
-    """Emits DBus signal RobotPose and TaskInfo """
-    name = multiprocessing.current_process().name
-    logger.debug (' %s Starting',  name)
-    server_main(dbus_iface,  dbus_path,  sig1, sig2,  delay)
-
-def client_proc(data_mgr,  dbus_iface,  dbus_path,  sig1,  sig2):
-    """Catches DBus signal RobotPose and TaskInfo  and saves into DataManager"""
-    name = multiprocessing.current_process().name
-    logger.debug (' %s Starting',  name)
-    #print name, 'Starting'
-    client_main(data_mgr,  dbus_iface,  dbus_path,  sig1,  sig2)
 
 if __name__ == '__main__':
      dm = DataManager()
+     robot = RILRobot(id=1)
+     robot.InitTaskRecords(MAXSHOPTASK)
      sig1 = "RobotPose"
      sig2 = "TaskInfo"
      delay = 3 # interval between signals
-     dbus_server = multiprocessing.Process(target=server_proc,\
+     dbus_server = multiprocessing.Process(target=dbus_server.server_main,\
                                 name="RIL_dbus_server",  args=(DBUS_IFACE, DBUS_PATH,  sig1, sig2,  delay,  ))
-     dbus_client = multiprocessing.Process(target=client_proc,\
+     dbus_client = multiprocessing.Process(target=dbus_comm_handler.client_main,\
                                 name="RIL_dbus_client",  args=(dm,  DBUS_IFACE, DBUS_PATH, sig1,  sig2 ))
-     dbus_server.start()
-     dbus_client.start()
-     time.sleep(10)
-     dbus_server.join()
-     dbus_client.join()
+     taskselector = multiprocessing.Process(target=task_selector.selector_main,\
+                                name="TaskSelector",  args=(dm,  robot ))
+                                                                     
+     main()
+      
+
 

@@ -2,18 +2,19 @@
 <!DOCTYPE Session SYSTEM "Session-4.3.dtd">
 <!-- eric4 session file for project EpuckPyClient -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2009-12-27, 20:27:29 -->
+<!-- Saved: 2009-12-29, 18:34:09 -->
 <Session version="4.3">
   <Filenames>
-    <Filename cline="37" cindex="19" folds="">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</Filename>
-    <Filename cline="6" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
-    <Filename cline="17" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/RILSetup.py</Filename>
-    <Filename cline="48" cindex="1" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_comm_handler.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/RILSetup.py</Filename>
+    <Filename cline="27" cindex="32" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_comm_handler.py</Filename>
     <Filename cline="16" cindex="33" folds="">/home/omar/epuck-py-client/eric-prj/src/pose.py</Filename>
-    <Filename cline="4" cindex="28" folds="">/home/omar/epuck-py-client/eric-prj/src/shop_task.py</Filename>
-    <Filename cline="32" cindex="67" folds="">/home/omar/epuck-py-client/eric-prj/src/ril_robot.py</Filename>
+    <Filename cline="25" cindex="20" folds="">/home/omar/epuck-py-client/eric-prj/src/logging.conf</Filename>
+    <Filename cline="31" cindex="26" folds="">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</Filename>
+    <Filename cline="38" cindex="37" folds="">/home/omar/epuck-py-client/eric-prj/src/task_selector.py</Filename>
+    <Filename cline="29" cindex="13" folds="">/home/omar/epuck-py-client/eric-prj/src/ril_robot.py</Filename>
   </Filenames>
-  <ActiveWindow cline="32" cindex="67">/home/omar/epuck-py-client/eric-prj/src/ril_robot.py</ActiveWindow>
+  <ActiveWindow cline="38" cindex="37">/home/omar/epuck-py-client/eric-prj/src/task_selector.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchexpressions>

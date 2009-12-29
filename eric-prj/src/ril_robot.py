@@ -14,7 +14,6 @@ class TaskRecord:
         return self.info
 
 class RILRobot:
-    taskrec = {}
     def __init__(self,  id=-1,  state=NOTSET,  pose=Pose(),\
                    lr=INIT_LEARN_RATE,  fr=INIT_FORGET_RATE, shoptask=ShopTask() ):             
         self.id = id
@@ -23,13 +22,18 @@ class RILRobot:
         self.learnrate = lr
         self.forgetrate = fr
         self.shoptask = shoptask # currently doing task
+        self.taskrec = {}
 
     def InitTaskRecords(self,  taskcount):
         while taskcount >= 0:
-            self.taskrec[taskcount] = TaskRecord(id=taskcount)
-            taskcount = taskcount - 1
+             taskcount = taskcount - 1
+             self.taskrec[taskcount] = TaskRecord(id=taskcount)
     
     def UpdatePose(self,  datamgr):
         if(datamgr.mRobotPose[0] is not 0): # default value changed
             self.pose.Update(datamgr.mRobotPose)
             #print self.pose.info
+    
+    def GetSensitization(self,  taskid):
+        return self.taskrec[taskid].sensitization
+        

@@ -1,6 +1,22 @@
-2009-12-28 18:39:33,423 - EpcLogger - DEBUG -  RIL_dbus_server Starting
-2009-12-28 18:39:33,467 - EpcLogger - DEBUG -  RIL_dbus_client Starting
-2009-12-28 18:39:36,461 - EpcLogger - INFO - Len logged: 4
-2009-12-28 18:39:39,465 - EpcLogger - INFO - Len logged: 4
-2009-12-28 18:39:42,461 - EpcLogger - INFO - Len logged: 4
-2009-12-28 18:39:45,479 - EpcLogger - INFO - Len logged: 4
+2009-12-29 19:11:00,569 - root - DEBUG - --- Start EPC---
+2009-12-29 19:11:03,874 - EpcLogger - INFO - RobotPose Len logged: 4
+2009-12-29 19:11:03,882 - EpcLogger - INFO - Taskid -- 0:
+2009-12-29 19:11:03,882 - EpcLogger - DEBUG - 	Task dist 1345.362405:
+2009-12-29 19:11:03,882 - EpcLogger - DEBUG - 	Task learn 0.100000:
+2009-12-29 19:11:03,882 - EpcLogger - DEBUG - 	Task urg 0.500000:
+2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task stimuli 0.000037:
+2009-12-29 19:11:03,883 - EpcLogger - INFO - Taskid -- 1:
+2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task dist 141.421356:
+2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task learn 0.100000:
+2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task urg 0.500000:
+2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task stimuli 0.000354:
+2009-12-29 19:11:03,884 - EpcLogger - INFO - Taskid -- 2:
+2009-12-29 19:11:03,884 - EpcLogger - DEBUG - 	Task dist 1920.937271:
+2009-12-29 19:11:03,884 - EpcLogger - DEBUG - 	Task learn 0.100000:
+2009-12-29 19:11:03,884 - EpcLogger - DEBUG - 	Task urg 0.500000:
+2009-12-29 19:11:03,884 - EpcLogger - DEBUG - 	Task stimuli 0.000026:
+2009-12-29 19:11:03,884 - EpcLogger - ERROR - Enumerate(list) error
+2009-12-29 19:11:03,884 - EpcLogger - DEBUG - Stimulus sum: 0.000417
+2009-12-29 19:11:06,833 - EpcLogger - INFO - RobotPose Len logged: 4
+2009-12-29 19:11:09,837 - EpcLogger - INFO - RobotPose Len logged: 4
+2009-12-29 19:11:12,834 - EpcLogger - INFO - RobotPose Len logged: 4

@@ -1,6 +1,6 @@
 import time, os, sys, sched, subprocess, re, signal, traceback
 import gobject, dbus, dbus.service, dbus.mainloop.glib 
-import multiprocessing,  logging,  logging.config
+import multiprocessing,  logging,  logging.config,  logging.handlers
 
 logging.config.fileConfig("logging.conf")
 logger = logging.getLogger("EpcLogger")
@@ -23,8 +23,9 @@ def save_pose(pose_val):
     try:
         datamgr_proxy.mRobotPose = []
         datamgr_proxy.mRobotPose = extract_objects(pose_val)
+        datamgr_proxy.mRobotPoseAvailable.set()
         print datamgr_proxy.mRobotPose
-        logger.info("Len logged: %d" ,  len(datamgr_proxy.mRobotPose))
+        logger.info("RobotPose Len logged: %d" ,  len(datamgr_proxy.mRobotPose))
     except:
        print "Err in save_pose()"
 
@@ -36,6 +37,7 @@ def save_taskinfo(taskinfo):
             key = eval(str(k))
             value = extract_objects(v)
             datamgr_proxy.mTaskInfo[key] = value 
+        datamgr_proxy.mTaskInfoAvailable.set()
         print datamgr_proxy.mTaskInfo
     except:
        print "Err in save_taskinfo()"
