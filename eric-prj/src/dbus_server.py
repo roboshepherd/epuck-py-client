@@ -7,14 +7,15 @@ from task_info import *
 from pose import *
 
 schedule = sched.scheduler(time.time, time.sleep)
-pose = Pose(x=300,  y=200,  theta=2.5).info
+pose = Pose(x=700,  y=500,  theta=2.5).info
 ti = TaskInfo()
-task0 = ShopTask(id =0,  x=900,  y=1000)
-task1 = ShopTask(id=1,  x=100,  y=100)
+#task0 = ShopTask(id =0,  x=900,  y=1000)
+task1 = ShopTask(id=1,  x=900,  y=1100)
 task2 = ShopTask(id=2,  x=1500,  y=1200)
-ti.AddTaskInfo(0,  task0.Info())
+task3 = ShopTask(id=3,  x=2500,  y=1800)
 ti.AddTaskInfo(1,  task1.Info()) 
 ti.AddTaskInfo(2,  task2.Info())
+ti.AddTaskInfo(3,  task3.Info())
 taskinfo = ti.all
 
 class TrackerSignal(dbus.service.Object):

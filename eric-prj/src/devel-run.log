@@ -1,22 +1,8 @@
-2009-12-29 19:11:00,569 - root - DEBUG - --- Start EPC---
-2009-12-29 19:11:03,874 - EpcLogger - INFO - RobotPose Len logged: 4
-2009-12-29 19:11:03,882 - EpcLogger - INFO - Taskid -- 0:
-2009-12-29 19:11:03,882 - EpcLogger - DEBUG - 	Task dist 1345.362405:
-2009-12-29 19:11:03,882 - EpcLogger - DEBUG - 	Task learn 0.100000:
-2009-12-29 19:11:03,882 - EpcLogger - DEBUG - 	Task urg 0.500000:
-2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task stimuli 0.000037:
-2009-12-29 19:11:03,883 - EpcLogger - INFO - Taskid -- 1:
-2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task dist 141.421356:
-2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task learn 0.100000:
-2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task urg 0.500000:
-2009-12-29 19:11:03,883 - EpcLogger - DEBUG - 	Task stimuli 0.000354:
-2009-12-29 19:11:03,884 - EpcLogger - INFO - Taskid -- 2:
-2009-12-29 19:11:03,884 - EpcLogger - DEBUG - 	Task dist 1920.937271:
-2009-12-29 19:11:03,884 - EpcLogger - DEBUG - 	Task learn 0.100000:
-2009-12-29 19:11:03,884 - EpcLogger - DEBUG - 	Task urg 0.500000:
-2009-12-29 19:11:03,884 - EpcLogger - DEBUG - 	Task stimuli 0.000026:
-2009-12-29 19:11:03,884 - EpcLogger - ERROR - Enumerate(list) error
-2009-12-29 19:11:03,884 - EpcLogger - DEBUG - Stimulus sum: 0.000417
-2009-12-29 19:11:06,833 - EpcLogger - INFO - RobotPose Len logged: 4
-2009-12-29 19:11:09,837 - EpcLogger - INFO - RobotPose Len logged: 4
-2009-12-29 19:11:12,834 - EpcLogger - INFO - RobotPose Len logged: 4
+2009-12-29 23:12:11,739 - root - DEBUG - --- Start EPC---
+2009-12-29 23:12:14,905 - EpcLogger - INFO - RobotPose Len logged: 4
+2009-12-29 23:12:14,907 - EpcLogger - DEBUG - Robot pose x=0.000000 y=0.000000:
+2009-12-29 23:12:14,907 - EpcLogger - ERROR - FIXME --  Enumerate(list) error
+2009-12-29 23:12:14,907 - EpcLogger - DEBUG - Stimulus sum: 0.000000
+2009-12-29 23:12:14,907 - EpcLogger - DEBUG - RandomWalk Stimuli: 0.761594
+2009-12-29 23:12:17,882 - EpcLogger - INFO - RobotPose Len logged: 4
+2009-12-29 23:12:20,896 - EpcLogger - INFO - RobotPose Len logged: 4

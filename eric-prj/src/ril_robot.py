@@ -1,6 +1,7 @@
 from pose import *
 from shop_task import *
 from RILSetup import *
+from data_manager import *
 class TaskRecord:
     info = []
     def __init__(self,  id=-1,  sensitization=INIT_SENSITIZATION,  dist=0,  stimuli=0,  probability=0):
@@ -25,14 +26,20 @@ class RILRobot:
         self.taskrec = {}
 
     def InitTaskRecords(self,  taskcount):
-        while taskcount >= 0:
-             taskcount = taskcount - 1
-             self.taskrec[taskcount] = TaskRecord(id=taskcount)
+        """ Initialize task records where task0 is random walk"""
+        count = taskcount
+        while count >= 0:
+             self.taskrec[count] = TaskRecord(id=count)
+             count = count - 1
     
     def UpdatePose(self,  datamgr):
-        if(datamgr.mRobotPose[0] is not 0): # default value changed
+        #datamgr.mRobotPoseAvailable.wait()
+        #if(datamgr.mRobotPose[0] is not 0): # default value changed
+        try:
             self.pose.Update(datamgr.mRobotPose)
-            #print self.pose.info
+        except:
+            print "@Robot Raw pose from datamgr: %d" % len(datamgr.mRobotPose)
+        #print self.pose.info
     
     def GetSensitization(self,  taskid):
         return self.taskrec[taskid].sensitization

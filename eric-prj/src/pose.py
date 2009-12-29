@@ -10,8 +10,11 @@ class  Pose:
         self.info = [ts,  x,  y,  theta]
     
     def Update(self, poseinfo ):
-        self.info = poseinfo
-        self.ts = poseinfo[0]
-        self.x =  poseinfo[1]
-        self.y=  poseinfo[2]
-        self.theta =  poseinfo[3]
+        try:
+            self.info = poseinfo
+            self.ts = poseinfo[0]
+            self.x =  poseinfo[1]
+            self.y=  poseinfo[2]
+            self.theta =  poseinfo[3]
+        except:
+            print "Pose Update failed"

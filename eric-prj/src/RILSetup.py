@@ -1,4 +1,15 @@
 from math import pi
+# Enabling/Disabling Some Expt Settings/Params
+USE_NORMALIZED_POSE = True
+
+# DBus  RobotPose Message Protocol
+TASK_INFO_TIME  = 0
+TASK_INFO_X  = 1
+TASK_INFO_Y  = 2
+TASK_INFO_THETA = 3
+TASK_INFO_PHI = 4
+
+
 #D-Bus Config
 DBUS_IFACE = "uk.ac.newport.ril.RobotTracker"
 DBUS_PATH = "/robot1"
