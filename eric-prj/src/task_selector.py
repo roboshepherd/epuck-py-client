@@ -26,7 +26,7 @@ class TaskSelector():
         self.deltadist = DELTA_DISTANCE
 
     def  CalculateDist(self,  rp,  tx,  ty):
-        if USE_NORMALIZED_POSE == True:
+        if USE_NORMALIZED_POSE is True:
             x1 = rp.x/(MAX_X * 10)
             y1 = rp.y/(MAX_Y * 10)
             x2 = tx/(MAX_X * 10)

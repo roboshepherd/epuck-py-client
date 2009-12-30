@@ -62,6 +62,11 @@ class RILRobot:
                                      selectedTaskId,  self.taskrec[selectedTaskId].sensitization,\
                                      self.taskrec[selectedTaskId].timesDone  )
                     else:
-                         self.taskrec[k].sensitization = self.taskrec[k].sensitization - self.learnrate
+                         self.taskrec[k].sensitization = self.taskrec[k].sensitization - self.forgetrate
+                    # keep value between 0 ~ 1
+                    if self.taskrec[k].sensitization < 0:
+                        self.taskrec[k].sensitization = 0
+                    elif self.taskrec[k].sensitization > 1:
+                        self.taskrec[k].sensitization = 1
             except:
                 logger.warn("Task record update failed")
