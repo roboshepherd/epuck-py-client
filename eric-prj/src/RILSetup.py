@@ -1,6 +1,7 @@
 from math import pi
-# Enabling/Disabling Some Expt Settings/Params
+# Enabling/Disabling Some Expt Settings/Params of TaskSelector
 USE_NORMALIZED_POSE = True
+INIT_SLEEP = 10
 
 # DBus  RobotPose Message Protocol
 TASK_INFO_TIME  = 0

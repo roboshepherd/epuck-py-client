@@ -1,0 +1,21 @@
+2009-12-29 22:14:37,400 - root - DEBUG - --- Start EPC---
+2009-12-29 22:14:40,558 - EpcLogger - INFO - RobotPose Len logged: 4
+2009-12-29 22:14:40,560 - EpcLogger - INFO - Taskid -- 0:
+2009-12-29 22:14:40,560 - EpcLogger - DEBUG - 	Task dist 1345.362405:
+2009-12-29 22:14:40,560 - EpcLogger - DEBUG - 	Task learn 0.100000:
+2009-12-29 22:14:40,561 - EpcLogger - DEBUG - 	Task urg 0.500000:
+2009-12-29 22:14:40,561 - EpcLogger - DEBUG - 	Task stimuli 0.000037:
+2009-12-29 22:14:40,562 - EpcLogger - INFO - Taskid -- 1:
+2009-12-29 22:14:40,562 - EpcLogger - DEBUG - 	Task dist 141.421356:
+2009-12-29 22:14:40,563 - EpcLogger - DEBUG - 	Task learn 0.100000:
+2009-12-29 22:14:40,563 - EpcLogger - DEBUG - 	Task urg 0.500000:
+2009-12-29 22:14:40,563 - EpcLogger - DEBUG - 	Task stimuli 0.000354:
+2009-12-29 22:14:40,565 - EpcLogger - INFO - Taskid -- 2:
+2009-12-29 22:14:40,565 - EpcLogger - DEBUG - 	Task dist 1920.937271:
+2009-12-29 22:14:40,565 - EpcLogger - DEBUG - 	Task learn 0.100000:
+2009-12-29 22:14:40,566 - EpcLogger - DEBUG - 	Task urg 0.500000:
+2009-12-29 22:14:40,566 - EpcLogger - DEBUG - 	Task stimuli 0.000026:
+2009-12-29 22:14:40,567 - EpcLogger - ERROR - FIXME --  Enumerate(list) error
+2009-12-29 22:14:40,567 - EpcLogger - DEBUG - Stimulus sum: 0.000417
+2009-12-29 22:14:40,567 - EpcLogger - DEBUG - RandomWalk Stimuli: 0.761550
+2009-12-29 22:14:43,543 - EpcLogger - INFO - RobotPose Len logged: 4

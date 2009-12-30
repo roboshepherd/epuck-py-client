@@ -1,4 +1,4 @@
-import math,  logging,  logging.config,  logging.handlers
+import math,  time,  logging,  logging.config,  logging.handlers
 from RILSetup import *
 from data_manager import *
 from ril_robot import *
@@ -25,10 +25,10 @@ class TaskSelector():
 
     def  CalculateDist(self,  rp,  tx,  ty):
         if USE_NORMALIZED_POSE == True:
-            x1 = rp.x/(MAX_X * 1)
-            y1 = rp.y/(MAX_Y * 1)
-            x2 = tx/(MAX_X * 1)
-            y2 = ty/(MAX_Y * 1)
+            x1 = rp.x/(MAX_X * 10)
+            y1 = rp.y/(MAX_Y * 10)
+            x2 = tx/(MAX_X * 10)
+            y2 = ty/(MAX_Y * 10)
         else:
             x1 = rp.x
             y1 = rp.y
@@ -46,14 +46,17 @@ class TaskSelector():
 
     def CalculateProbabilities(self):
         r = self.robot
-        #logger.debug("Robot pose raw %f:" , self.datamgr.mRobotPose )
-        r.pose.Update(self.datamgr.mRobotPose)
-        logger.debug("Robot pose x=%f y=%f:" , r.pose.x,  r.pose.y )
+        dm = self.datamgr
+        #logger.debug("@TS Robot pose %s:" , dm.mRobotPose.items() )
+        r.pose.UpdateFromList(dm.mRobotPose)
+        logger.debug("@TS  Robot pose x=%f y=%f:" , r.pose.x,  r.pose.y )
         ti = self.taskinfo
+        logger.debug("\t TaskInfo: %s",  ti.items() )
         taskcount = len(ti)
+        logger.debug("\t taskcount %d:" , taskcount)
         try:
-            for index,  info in enumerate(ti):
-                taskid = index + 1
+            for index,  info in ti.items():
+                taskid = index 
                 logger.info("Taskid -- %i:" ,  taskid)
                 tx,  ty = info[1],  info[2]
                 dist = self.CalculateDist(r.pose,  tx, ty)
@@ -71,7 +74,7 @@ class TaskSelector():
                 r.taskrec[taskid].dist = dist
                 r.taskrec[taskid].stimuli = stimuli
         except:
-            logger.error("FIXME --  Enumerate(list) error")
+            logger.error("FIXME --  list error")
         sum = math.fsum(self.stimulus)
         logger.debug("Stimulus sum: %f",  sum)
         rwStimuli = self.CalculateRandomWalkStimuli(sum,  taskcount)
@@ -82,13 +85,16 @@ class TaskSelector():
         
 # main process function
 def  selector_main(dataManager,  robot):
+    #time.sleep(INIT_SLEEP)
     ts = TaskSelector(dataManager,  robot)
     while True:
         dataManager.mRobotPoseAvailable.wait()
         #logger.debug("Robot psoe.x:%d ",  ts.robot.pose.x )
         dataManager.mTaskInfoAvailable.wait()
-        #logger.debug("Dictlen %d",  len(dataManager.mTaskInfo))
-        #logger.debug("TaskInfo: %s",  dataManager.mTaskInfo.items() )
+        #logger.debug("@TS TaskInfo Dictlen %d",  len(dataManager.mTaskInfo))
+        #l =  len(dataManager.mRobotPose )
+        #logger.debug("@TS Robot pose dict len %d:" , l)
+        #logger.debug("@TS Robot pose %s:" , dataManager.mRobotPose.items() )
         ts.SelectTask() # can be started delayed
         dataManager.mTaskDoneOTO.wait() # task done or timedout
     

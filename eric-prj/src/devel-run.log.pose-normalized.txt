@@ -1,0 +1,25 @@
+2009-12-30 12:13:54,981 - root - DEBUG - --- Start EPC---
+2009-12-30 12:13:58,549 - EpcLogger - INFO - @DBC Len logged: 4
+2009-12-30 12:13:58,550 - EpcLogger - DEBUG - @TS RTaskInfo Dictlen 3
+2009-12-30 12:13:58,551 - EpcLogger - DEBUG - @TS Robot pose dict len 4:
+2009-12-30 12:13:58,551 - EpcLogger - DEBUG - @TS Robot pose x=700.000000 y=500.000000:
+2009-12-30 12:13:58,551 - EpcLogger - DEBUG - 	 TaskInfo: [(1, [1262175233.8800001, 900.0, 1100.0, 0.0, 0.5]), (2, [1262175233.8800001, 1500.0, 1200.0, 0.0, 0.5]), (3, [1262175233.8800001, 2500.0, 1800.0, 0.0, 0.5])]
+2009-12-30 12:13:58,551 - EpcLogger - DEBUG - 	 taskcount 3:
+2009-12-30 12:13:58,552 - EpcLogger - INFO - Taskid -- 1:
+2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task dist 0.192902:
+2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task learn 0.100000:
+2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task urg 0.500000:
+2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task stimuli 0.252295:
+2009-12-30 12:13:58,552 - EpcLogger - INFO - Taskid -- 2:
+2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task dist 0.309565:
+2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task learn 0.100000:
+2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task urg 0.500000:
+2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task stimuli 0.159620:
+2009-12-30 12:13:58,553 - EpcLogger - INFO - Taskid -- 3:
+2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task dist 0.640466:
+2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task learn 0.100000:
+2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task urg 0.500000:
+2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task stimuli 0.077789:
+2009-12-30 12:13:58,554 - EpcLogger - DEBUG - Stimulus sum: 0.489704
+2009-12-30 12:13:58,554 - EpcLogger - DEBUG - RandomWalk Stimuli: 0.705202
+2009-12-30 12:14:01,538 - EpcLogger - INFO - @DBC Len logged: 4

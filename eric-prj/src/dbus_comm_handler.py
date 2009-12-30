@@ -18,14 +18,18 @@ def extract_objects(object_list):
 	return  list
 
 
-def save_pose(pose_val):
+def save_pose(pose):
     global datamgr_proxy
     try:
-        datamgr_proxy.mRobotPose = []
-        datamgr_proxy.mRobotPose = extract_objects(pose_val)
+        datamgr_proxy.mRobotPose.clear()
+        for k, v in pose.iteritems():
+            key = str(k)
+            value = eval(str(v))
+            datamgr_proxy.mRobotPose[key] = value 
         datamgr_proxy.mRobotPoseAvailable.set()
         print datamgr_proxy.mRobotPose
-        logger.info("RobotPose Len logged: %d" ,  len(datamgr_proxy.mRobotPose))
+        #logger.info("RobotPose-x %f",  datamgr_proxy.mRobotPose[1])
+        logger.info("@DBC RobotPose recvd. len logged: %d" ,  len(datamgr_proxy.mRobotPose))
     except:
        print "Err in save_pose()"
 
