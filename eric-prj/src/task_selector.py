@@ -27,10 +27,10 @@ class TaskSelector():
 
     def  CalculateDist(self,  rp,  tx,  ty):
         if USE_NORMALIZED_POSE is True:
-            x1 = rp.x/(MAX_X * 10)
-            y1 = rp.y/(MAX_Y * 10)
-            x2 = tx/(MAX_X * 10)
-            y2 = ty/(MAX_Y * 10)
+            x1 = rp.x/(MAX_X * POSE_FACTOR)
+            y1 = rp.y/(MAX_Y * POSE_FACTOR)
+            x2 = tx/(MAX_X * POSE_FACTOR)
+            y2 = ty/(MAX_Y * POSE_FACTOR)
         else:
             x1 = rp.x
             y1 = rp.y

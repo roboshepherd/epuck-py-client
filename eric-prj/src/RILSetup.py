@@ -1,6 +1,7 @@
 from math import pi
 # Enabling/Disabling Some Expt Settings/Params of TaskSelector
-USE_NORMALIZED_POSE = False
+USE_NORMALIZED_POSE = True
+POSE_FACTOR = 1
 PROB_SCALE = 100
 
 
