@@ -8,7 +8,8 @@ logging.config.fileConfig("logging.conf")
 logger = logging.getLogger("EpcLogger")
 
 class Range():
-    def __init__(self):
+    def __init__(self,  id):
+        self.id = id
         self.start = 0
         self.end = 0
 
@@ -19,7 +20,7 @@ class TaskSelector():
         self.taskinfo = dm.mTaskInfo
         self.stimulus = []
         self.probabilities = []
-        self.taskranges = {} # put inst. of Range()
+        self.taskranges = {} # put inst. of Range()es
         self.selected_taskid = -1 
         self.deltadist = DELTA_DISTANCE
 
@@ -41,7 +42,7 @@ class TaskSelector():
         return stimuli
     
     def CalculateRandomWalkStimuli(self,  taskstimulus,  taskcount):
-        stimuli = math.tanh( 1 - taskstimulus /  (taskcount + 1))
+        stimuli = math.tanh( 1 - (taskstimulus /  (taskcount + 1)))
         return stimuli
 
     def CalculateProbabilities(self):
@@ -52,18 +53,18 @@ class TaskSelector():
         logger.debug("@TS  Robot pose x=%f y=%f:" , r.pose.x,  r.pose.y )
         ti = self.taskinfo
         logger.debug("\t TaskInfo: %s",  ti.items() )
-        taskcount = len(ti)
-        logger.debug("\t taskcount %d:" , taskcount)
+        taskCount = len(ti)
+        logger.debug("\t task count %d:" , taskCount)
         try:
             for index,  info in ti.items():
                 taskid = index 
                 logger.info("Taskid -- %i:" ,  taskid)
-                tx,  ty = info[1],  info[2]
+                tx,  ty = info[TASK_INFO_X],  info[TASK_INFO_Y]
                 dist = self.CalculateDist(r.pose,  tx, ty)
                 logger.debug("\tTask dist %f:" ,  dist)
                 learn =  r.taskrec[taskid].sensitization
                 logger.debug("\tTask learn %f:" ,  learn)
-                urg = info[4]
+                urg = info[TASK_INFO_URGENCY ]
                 logger.debug("\tTask urg %f:" ,  urg)
                 stimuli = self.CalculateTaskStimuli(learn, dist, self.deltadist, urg)
                 logger.debug("\tTask stimuli %f:" ,  stimuli)
@@ -75,13 +76,40 @@ class TaskSelector():
                 r.taskrec[taskid].stimuli = stimuli
         except:
             logger.error("FIXME --  list error")
-        sum = math.fsum(self.stimulus)
-        logger.debug("Stimulus sum: %f",  sum)
-        rwStimuli = self.CalculateRandomWalkStimuli(sum,  taskcount)
-        logger.debug("RandomWalk Stimuli: %f",  rwStimuli)
+        tsSum = math.fsum(self.stimulus)
+        logger.debug("@TS Task Stimulus sum: %f",  tsSum)
+        rwStimuli = self.CalculateRandomWalkStimuli(tsSum,  taskCount)
+        logger.debug("@TS RandomWalk Stimuli: %f",  rwStimuli)
+        taskid = 0
+        r.taskrec[taskid].stimuli = rwStimuli
+        stimulusSum = tsSum +  rwStimuli
+        while taskid <= taskCount:
+            pb =  r.taskrec[taskid].stimuli / stimulusSum
+            r.taskrec[taskid].probability =pb
+            logger.debug("@TS Task %d Prob %f",  taskid,  pb )
+            taskid = taskid + 1
+    
+    def ConvertProbbToRange(self):
+         robot = self.robot
+         tasks = len(robot.taskrec)
+         logger.debug("@TS Task Count including RW: %d",  tasks)
+         startup = 0
+         endsave = 0
+         for taskid in range (tasks):
+             end = robot.taskrec[taskid].probability * PROB_SCALE
+             end = int(round(end)) + endsave
+             r =  Range(taskid)
+             r.start = startup
+             r.end = end
+             startup = end + 1
+             endsave = end
+             logger.debug("@TS Task %d prob start: %d  end: %d",  r.id, r.start, r.end )
+
+
     
     def SelectTask(self):
         self.CalculateProbabilities()
+        self.ConvertProbbToRange()
         
 # main process function
 def  selector_main(dataManager,  robot):

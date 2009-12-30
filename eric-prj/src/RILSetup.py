@@ -1,14 +1,15 @@
 from math import pi
 # Enabling/Disabling Some Expt Settings/Params of TaskSelector
 USE_NORMALIZED_POSE = True
-INIT_SLEEP = 10
+PROB_SCALE = 100
+
 
 # DBus  RobotPose Message Protocol
 TASK_INFO_TIME  = 0
 TASK_INFO_X  = 1
 TASK_INFO_Y  = 2
 TASK_INFO_THETA = 3
-TASK_INFO_PHI = 4
+TASK_INFO_URGENCY = 4
 
 
 #D-Bus Config
