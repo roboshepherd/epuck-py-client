@@ -1,25 +1,158 @@
-2009-12-30 12:13:54,981 - root - DEBUG - --- Start EPC---
-2009-12-30 12:13:58,549 - EpcLogger - INFO - @DBC Len logged: 4
-2009-12-30 12:13:58,550 - EpcLogger - DEBUG - @TS RTaskInfo Dictlen 3
-2009-12-30 12:13:58,551 - EpcLogger - DEBUG - @TS Robot pose dict len 4:
-2009-12-30 12:13:58,551 - EpcLogger - DEBUG - @TS Robot pose x=700.000000 y=500.000000:
-2009-12-30 12:13:58,551 - EpcLogger - DEBUG - 	 TaskInfo: [(1, [1262175233.8800001, 900.0, 1100.0, 0.0, 0.5]), (2, [1262175233.8800001, 1500.0, 1200.0, 0.0, 0.5]), (3, [1262175233.8800001, 2500.0, 1800.0, 0.0, 0.5])]
-2009-12-30 12:13:58,551 - EpcLogger - DEBUG - 	 taskcount 3:
-2009-12-30 12:13:58,552 - EpcLogger - INFO - Taskid -- 1:
-2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task dist 0.192902:
-2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task learn 0.100000:
-2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task urg 0.500000:
-2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task stimuli 0.252295:
-2009-12-30 12:13:58,552 - EpcLogger - INFO - Taskid -- 2:
-2009-12-30 12:13:58,552 - EpcLogger - DEBUG - 	Task dist 0.309565:
-2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task learn 0.100000:
-2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task urg 0.500000:
-2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task stimuli 0.159620:
-2009-12-30 12:13:58,553 - EpcLogger - INFO - Taskid -- 3:
-2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task dist 0.640466:
-2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task learn 0.100000:
-2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task urg 0.500000:
-2009-12-30 12:13:58,553 - EpcLogger - DEBUG - 	Task stimuli 0.077789:
-2009-12-30 12:13:58,554 - EpcLogger - DEBUG - Stimulus sum: 0.489704
-2009-12-30 12:13:58,554 - EpcLogger - DEBUG - RandomWalk Stimuli: 0.705202
-2009-12-30 12:14:01,538 - EpcLogger - INFO - @DBC Len logged: 4
+2009-12-30 18:50:27,556 - root - DEBUG - --- Start EPC---
+2009-12-30 18:50:30,673 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:30,676 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:30,677 - EpcLogger - INFO - 	Task 1 stimuli 0.985629:
+2009-12-30 18:50:30,678 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:30,678 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:30,678 - EpcLogger - INFO - 	 RandomWalk Stimuli: 0.347863
+2009-12-30 18:50:30,679 - EpcLogger - INFO - 	 Select task 0 
+2009-12-30 18:50:30,680 - EpcLogger - INFO - task 0 inc. sensitization:0.200000, timesDone:1
+2009-12-30 18:50:32,682 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:32,683 - EpcLogger - INFO - 	Task 1 stimuli 0.985629:
+2009-12-30 18:50:32,684 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:32,684 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:32,684 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.267323
+2009-12-30 18:50:32,685 - EpcLogger - INFO - 	 Select task 0 
+2009-12-30 18:50:32,685 - EpcLogger - INFO - task 0 inc. sensitization:0.300000, timesDone:2
+2009-12-30 18:50:33,674 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:34,689 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:34,690 - EpcLogger - INFO - 	Task 1 stimuli 0.985629:
+2009-12-30 18:50:34,690 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:34,691 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:34,691 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.721596
+2009-12-30 18:50:34,691 - EpcLogger - INFO - 	 Select task 0 
+2009-12-30 18:50:34,691 - EpcLogger - INFO - task 0 inc. sensitization:0.400000, timesDone:3
+2009-12-30 18:50:36,674 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:36,693 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:36,694 - EpcLogger - INFO - 	Task 1 stimuli 0.985629:
+2009-12-30 18:50:36,694 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:36,694 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:36,694 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.913448
+2009-12-30 18:50:36,694 - EpcLogger - INFO - 	 Select task 1 
+2009-12-30 18:50:36,695 - EpcLogger - INFO - task 1 inc. sensitization:0.200000, timesDone:1
+2009-12-30 18:50:38,698 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:38,699 - EpcLogger - INFO - 	Task 1 stimuli 0.999895:
+2009-12-30 18:50:38,699 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:38,699 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:38,699 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.975186
+2009-12-30 18:50:38,700 - EpcLogger - INFO - 	 Select task 1 
+2009-12-30 18:50:38,700 - EpcLogger - INFO - task 1 inc. sensitization:0.300000, timesDone:2
+2009-12-30 18:50:39,680 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:40,702 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:40,703 - EpcLogger - INFO - 	Task 1 stimuli 0.999999:
+2009-12-30 18:50:40,704 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:40,704 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:40,704 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.993047
+2009-12-30 18:50:40,704 - EpcLogger - INFO - 	 Select task 1 
+2009-12-30 18:50:40,706 - EpcLogger - INFO - task 1 inc. sensitization:0.400000, timesDone:3
+2009-12-30 18:50:42,688 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:42,708 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:42,708 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:50:42,709 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:42,709 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:42,709 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.998064
+2009-12-30 18:50:42,709 - EpcLogger - INFO - 	 Select task 0 
+2009-12-30 18:50:42,709 - EpcLogger - INFO - task 0 inc. sensitization:0.500000, timesDone:4
+2009-12-30 18:50:44,711 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:44,712 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:50:44,712 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:44,712 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:44,712 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.999462
+2009-12-30 18:50:44,713 - EpcLogger - INFO - 	 Select task 1 
+2009-12-30 18:50:44,713 - EpcLogger - INFO - task 1 inc. sensitization:0.500000, timesDone:4
+2009-12-30 18:50:45,676 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:46,716 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:46,717 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:50:46,717 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:46,717 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:46,718 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.999851
+2009-12-30 18:50:46,718 - EpcLogger - INFO - 	 Select task 1 
+2009-12-30 18:50:46,718 - EpcLogger - INFO - task 1 inc. sensitization:0.600000, timesDone:5
+2009-12-30 18:50:48,679 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:48,721 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:48,721 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:50:48,721 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:48,722 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:48,722 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.999958
+2009-12-30 18:50:48,722 - EpcLogger - INFO - 	 Select task 1 
+2009-12-30 18:50:48,722 - EpcLogger - INFO - task 1 inc. sensitization:0.700000, timesDone:6
+2009-12-30 18:50:50,723 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:50,724 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:50:50,724 - EpcLogger - INFO - 	Task 2 stimuli 0.916167:
+2009-12-30 18:50:50,724 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:50,725 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.999988
+2009-12-30 18:50:50,725 - EpcLogger - INFO - 	 Select task 2 
+2009-12-30 18:50:50,727 - EpcLogger - INFO - task 2 inc. sensitization:0.200000, timesDone:1
+2009-12-30 18:50:51,684 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:52,729 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:52,730 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:50:52,731 - EpcLogger - INFO - 	Task 2 stimuli 0.996179:
+2009-12-30 18:50:52,731 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:52,731 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.999997
+2009-12-30 18:50:52,732 - EpcLogger - INFO - 	 Select task 1 
+2009-12-30 18:50:52,734 - EpcLogger - INFO - task 1 inc. sensitization:0.800000, timesDone:7
+2009-12-30 18:50:54,690 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:54,736 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:54,737 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:50:54,737 - EpcLogger - INFO - 	Task 2 stimuli 0.996179:
+2009-12-30 18:50:54,737 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:54,737 - EpcLogger - INFO - 	 RandomWalk Stimuli: -0.999999
+2009-12-30 18:50:54,737 - EpcLogger - INFO - 	 Select task 2 
+2009-12-30 18:50:54,738 - EpcLogger - INFO - task 2 inc. sensitization:0.300000, timesDone:2
+2009-12-30 18:50:56,740 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:56,742 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:50:56,742 - EpcLogger - INFO - 	Task 2 stimuli 0.999833:
+2009-12-30 18:50:56,742 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:56,743 - EpcLogger - INFO - 	 RandomWalk Stimuli: -1.000000
+2009-12-30 18:50:56,743 - EpcLogger - INFO - 	 Select task 1 
+2009-12-30 18:50:56,743 - EpcLogger - INFO - task 1 inc. sensitization:0.900000, timesDone:8
+2009-12-30 18:50:57,697 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:50:58,746 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:50:58,747 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:50:58,747 - EpcLogger - INFO - 	Task 2 stimuli 0.999833:
+2009-12-30 18:50:58,747 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:50:58,747 - EpcLogger - INFO - 	 RandomWalk Stimuli: -1.000000
+2009-12-30 18:50:58,748 - EpcLogger - INFO - 	 Select task 0 
+2009-12-30 18:50:58,748 - EpcLogger - INFO - task 0 inc. sensitization:0.600000, timesDone:5
+2009-12-30 18:51:00,689 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:51:00,750 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:51:00,751 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:51:00,751 - EpcLogger - INFO - 	Task 2 stimuli 0.999833:
+2009-12-30 18:51:00,752 - EpcLogger - INFO - 	Task 3 stimuli 0.646161:
+2009-12-30 18:51:00,752 - EpcLogger - INFO - 	 RandomWalk Stimuli: -1.000000
+2009-12-30 18:51:00,752 - EpcLogger - INFO - 	 Select task 3 
+2009-12-30 18:51:00,753 - EpcLogger - INFO - task 3 inc. sensitization:0.200000, timesDone:1
+2009-12-30 18:51:02,755 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:51:02,756 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:51:02,756 - EpcLogger - INFO - 	Task 2 stimuli 0.999833:
+2009-12-30 18:51:02,756 - EpcLogger - INFO - 	Task 3 stimuli 0.911675:
+2009-12-30 18:51:02,757 - EpcLogger - INFO - 	 RandomWalk Stimuli: -1.000000
+2009-12-30 18:51:02,757 - EpcLogger - INFO - 	 Select task 0 
+2009-12-30 18:51:02,758 - EpcLogger - INFO - task 0 inc. sensitization:0.700000, timesDone:6
+2009-12-30 18:51:03,698 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:51:04,760 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:51:04,761 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:51:04,762 - EpcLogger - INFO - 	Task 2 stimuli 0.999833:
+2009-12-30 18:51:04,762 - EpcLogger - INFO - 	Task 3 stimuli 0.911675:
+2009-12-30 18:51:04,762 - EpcLogger - INFO - 	 RandomWalk Stimuli: -1.000000
+2009-12-30 18:51:04,763 - EpcLogger - INFO - 	 Select task 2 
+2009-12-30 18:51:04,763 - EpcLogger - INFO - task 2 inc. sensitization:0.400000, timesDone:3
+2009-12-30 18:51:06,692 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:51:06,764 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:51:06,764 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:51:06,765 - EpcLogger - INFO - 	Task 2 stimuli 0.999993:
+2009-12-30 18:51:06,765 - EpcLogger - INFO - 	Task 3 stimuli 0.911675:
+2009-12-30 18:51:06,765 - EpcLogger - INFO - 	 RandomWalk Stimuli: -1.000000
+2009-12-30 18:51:06,765 - EpcLogger - INFO - 	 Select task 2 
+2009-12-30 18:51:06,766 - EpcLogger - INFO - task 2 inc. sensitization:0.500000, timesDone:4
+2009-12-30 18:51:08,768 - EpcLogger - INFO - @TS  -- Step Start--
+2009-12-30 18:51:08,769 - EpcLogger - INFO - 	Task 1 stimuli 1.000000:
+2009-12-30 18:51:08,769 - EpcLogger - INFO - 	Task 2 stimuli 1.000000:
+2009-12-30 18:51:08,769 - EpcLogger - INFO - 	Task 3 stimuli 0.911675:
+2009-12-30 18:51:08,770 - EpcLogger - INFO - 	 RandomWalk Stimuli: -1.000000
+2009-12-30 18:51:08,770 - EpcLogger - INFO - 	 Select task 1 
+2009-12-30 18:51:08,771 - EpcLogger - INFO - task 1 inc. sensitization:1.000000, timesDone:9
+2009-12-30 18:51:09,702 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:51:12,706 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:51:15,700 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2009-12-30 18:51:18,704 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4

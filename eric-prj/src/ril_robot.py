@@ -1,15 +1,22 @@
+import  logging,  logging.config,  logging.handlers
+logging.config.fileConfig("logging.conf")
+logger = logging.getLogger("EpcLogger")
+
 from pose import *
 from shop_task import *
 from RILSetup import *
 from data_manager import *
+
 class TaskRecord:
     info = []
-    def __init__(self,  id=-1,  sensitization=INIT_SENSITIZATION,  dist=0,  stimuli=0,  probability=0):
+    def __init__(self,  id=-1,  sensitization=INIT_SENSITIZATION,\
+                   dist=0,  stimuli=0,  probability=0,  timesDone=0):
         self.id = id
         self.sensitization = sensitization
         self.dist = dist
         self.stimuli = stimuli
         self.probability = probability
+        self.timesDone = timesDone
     def Info(self):
         self.info = [self.id,  self.sensitization,   self.dist,  self.stimuli,  self.probability  ]
         return self.info
@@ -41,6 +48,20 @@ class RILRobot:
             print "@Robot Raw pose from datamgr: %d" % len(datamgr.mRobotPose)
         #print self.pose.info
     
-    def GetSensitization(self,  taskid):
-        return self.taskrec[taskid].sensitization
-        
+    def UpdateTaskRecords(self,  selectedTaskId):
+            sz = self.taskrec[selectedTaskId].sensitization
+            td = self.taskrec[selectedTaskId].timesDone
+           # logger.info("task %d sensitization:%f, timesDone:%d",\
+           #                 selectedTaskId,  sz,  td  )
+            try:
+                for k,  v in self.taskrec.iteritems():   
+                    if k is selectedTaskId:
+                        self.taskrec[selectedTaskId].sensitization = sz + self.learnrate
+                        self.taskrec[selectedTaskId].timesDone  = td + 1
+                        logger.info("\ttask %d inc. sensitization:%f, timesDone:%d",\
+                                     selectedTaskId,  self.taskrec[selectedTaskId].sensitization,\
+                                     self.taskrec[selectedTaskId].timesDone  )
+                    else:
+                         self.taskrec[k].sensitization = self.taskrec[k].sensitization - self.learnrate
+            except:
+                logger.warn("Task record update failed")

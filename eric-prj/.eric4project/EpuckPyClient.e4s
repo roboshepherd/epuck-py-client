@@ -2,22 +2,22 @@
 <!DOCTYPE Session SYSTEM "Session-4.3.dtd">
 <!-- eric4 session file for project EpuckPyClient -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2009-12-30, 16:00:31 -->
+<!-- Saved: 2009-12-30, 18:33:46 -->
 <Session version="4.3">
   <Filenames>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</Filename>
-    <Filename cline="4" cindex="41" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
+    <Filename cline="9" cindex="34" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
     <Filename cline="3" cindex="16" folds="">/home/omar/epuck-py-client/eric-prj/src/RILSetup.py</Filename>
     <Filename cline="32" cindex="11" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_comm_handler.py</Filename>
-    <Filename cline="26" cindex="8" folds="">/home/omar/epuck-py-client/eric-prj/src/pose.py</Filename>
-    <Filename cline="25" cindex="20" folds="">/home/omar/epuck-py-client/eric-prj/src/logging.conf</Filename>
-    <Filename cline="100" cindex="28" folds="">/home/omar/epuck-py-client/eric-prj/src/task_selector.py</Filename>
-    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/ril_robot.py</Filename>
+    <Filename cline="1" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/pose.py</Filename>
+    <Filename cline="137" cindex="10" folds="">/home/omar/epuck-py-client/eric-prj/src/task_selector.py</Filename>
+    <Filename cline="56" cindex="27" folds="">/home/omar/epuck-py-client/eric-prj/src/ril_robot.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/task_info.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_server.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/utils.py</Filename>
+    <Filename cline="14" cindex="10" folds="">/home/omar/epuck-py-client/eric-prj/src/logging.conf</Filename>
   </Filenames>
-  <ActiveWindow cline="100" cindex="28">/home/omar/epuck-py-client/eric-prj/src/task_selector.py</ActiveWindow>
+  <ActiveWindow cline="0" cindex="0">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchexpressions>
