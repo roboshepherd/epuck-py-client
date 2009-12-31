@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI verified="false" xmi.version="1.2" timestamp="2009-12-31T12:38:39" xmlns:UML="http://schema.omg.org/spec/UML/1.3" >
+ <XMI.header>
+  <XMI.documentation>
+   <XMI.exporter>umbrello uml modeller http://uml.sf.net</XMI.exporter>
+   <XMI.exporterVersion>1.5.8</XMI.exporterVersion>
+   <XMI.exporterEncoding>UnicodeUTF8</XMI.exporterEncoding>
+  </XMI.documentation>
+  <XMI.metamodel xmi.version="1.3" href="UML.xml" xmi.name="UML" />
+ </XMI.header>
+ <XMI.content>
+  <UML:Model isSpecification="false" isAbstract="false" isLeaf="false" xmi.id="m1" isRoot="false" name="UML Model" >
+   <UML:Namespace.ownedElement>
+    <UML:Stereotype visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="folder" name="folder" />
+    <UML:Stereotype visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="datatype" name="datatype" />
+    <UML:Stereotype visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="interface" name="interface" />
+    <UML:Stereotype visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="RobotPose" name="RobotPose" />
+    <UML:Stereotype visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="TaskInfo" name="TaskInfo" />
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Logical View" name="Logical View" >
+     <UML:Namespace.ownedElement>
+      <UML:Package stereotype="folder" visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Datatypes" name="Datatypes" >
+       <UML:Namespace.ownedElement>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="fqUxyYxMD3LF" name="int" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="UKKmGxSgHYv9" name="char" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="HTbwb4MFsqAr" name="bool" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="N7BaBWndq6N5" name="float" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="3nlILfPc60Wi" name="double" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="3svvh5k4AwcJ" name="short" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="SPvHTIMW65nP" name="long" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="kC0pBUXELQ72" name="unsigned int" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Ts4doevE1qVV" name="unsigned short" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="6r1AvoadzYSA" name="unsigned long" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="2xONNVNoNPS9" name="string" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="HjZScM0FLYiV" name="array" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="w1KHpghFpkaB" name="tuple" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="nj3N1mvRMHRb" name="dict" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="axJ3VxuPwCfj" name="object" />
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="sMzg4XpsHsDI" name="set" />
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="nGAIUbjkpAUr" name="DeviceController" />
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="BNxLLcMHT7KW" name="DBusCommHandler" >
+       <UML:Classifier.feature>
+        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="tUS5qu9VY9hZ" name="UpdateRobotPose" />
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="wMmx2UTPm6wb" name="TaskSelector" />
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="5ZfQW0j6K1ZS" name="DataLogger" />
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="DtX1hqVboO4R" name="DataManager" >
+       <UML:Classifier.feature>
+        <UML:Attribute stereotype="RobotPose" visibility="public" isSpecification="false" xmi.id="scoCHDoryoMP" type="czO7Jt4efcuo" name="mRobotPose" />
+        <UML:Attribute stereotype="TaskInfo" visibility="public" isSpecification="false" xmi.id="IBAp3mbE1o0q" type="kNPVDEnb2T79" name="mTaskInfo" />
+        <UML:Attribute visibility="public" isSpecification="false" xmi.id="E67SfMxGs8iX" name="mSelectedTask" />
+        <UML:Attribute visibility="public" isSpecification="false" xmi.id="sHtQbr4WJ4TU" name="mDeviceState" />
+        <UML:Attribute visibility="public" isSpecification="false" xmi.id="WJsyEDGX7H9M" name="mTaskStatus" />
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="czO7Jt4efcuo" name="RobotPose" />
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="kNPVDEnb2T79" name="TaskInfo" />
+     </UML:Namespace.ownedElement>
+     <XMI.extension xmi.extender="umbrello" >
+      <diagrams>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="EpuckPyClient" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="nDH1Tu7AqVEQ" documentation="" showscope="1" snapgrid="0" showatts="1" type="1" >
+        <widgets>
+         <classwidget linecolor="none" usesdiagramfillcolor="1" linewidth="none" showoperations="1" usesdiagramusefillcolor="1" showpubliconly="1" showpackage="1" x="80" showattsigs="601" showstereotype="1" y="95" showattributes="1" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="123" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="nGAIUbjkpAUr" showscope="1" height="29" showopsigs="601" />
+         <classwidget linecolor="none" usesdiagramfillcolor="1" linewidth="none" showoperations="1" usesdiagramusefillcolor="1" showpubliconly="1" showpackage="1" x="271" showattsigs="601" showstereotype="1" y="91" showattributes="1" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="142" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="BNxLLcMHT7KW" showscope="1" height="37" showopsigs="601" />
+         <classwidget linecolor="none" usesdiagramfillcolor="1" linewidth="none" showoperations="1" usesdiagramusefillcolor="1" showpubliconly="1" showpackage="1" x="515" showattsigs="601" showstereotype="1" y="106" showattributes="1" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="95" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="wMmx2UTPm6wb" showscope="1" height="29" showopsigs="601" />
+         <classwidget linecolor="none" usesdiagramfillcolor="1" linewidth="none" showoperations="1" usesdiagramusefillcolor="1" showpubliconly="1" showpackage="1" x="260" showattsigs="601" showstereotype="1" y="182" showattributes="1" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="90" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="5ZfQW0j6K1ZS" showscope="1" height="29" showopsigs="601" />
+         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="1" showpackage="1" x="470" showattsigs="601" showstereotype="1" y="189" showattributes="1" font="DejaVu Sans,9,-1,5,50,0,0,0,0,0" width="170" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="DtX1hqVboO4R" showscope="1" height="97" showopsigs="601" />
+        </widgets>
+        <messages/>
+        <associations/>
+       </diagram>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="Centralized Task Performance" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="nCcrSKp2lifh" documentation="" showscope="1" snapgrid="0" showatts="1" type="6" >
+        <widgets/>
+        <messages/>
+        <associations/>
+       </diagram>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="Centralized Task Seq" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="2avZglfY3fr2" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="kMc29fopIVu0" documentation="" showscope="1" snapgrid="0" showatts="1" type="3" >
+        <widgets>
+         <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="75" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="dZAM14isXB9K" width="139" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="BNxLLcMHT7KW" height="25" drawasactor="0" />
+         <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="279" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="Uomgv7a2XzKi" width="102" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="DtX1hqVboO4R" height="25" drawasactor="0" />
+         <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="575" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="FwbkvIYQrNpv" width="120" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="nGAIUbjkpAUr" height="25" drawasactor="0" />
+         <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="428" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="2avZglfY3fr2" width="96" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="wMmx2UTPm6wb" height="25" drawasactor="0" />
+         <preconditionwidget width="250" showstereotype="1" x="351" y="88" usesdiagramusefillcolor="1" widgetaid="2avZglfY3fr2" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="OGB6mfawejZw" preconditionname="RobotPose, TaskInfo, NoPendingTask" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <preconditionwidget width="235" showstereotype="1" x="518" y="191" usesdiagramusefillcolor="1" widgetaid="FwbkvIYQrNpv" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="pnf0Iw0oPk5H" preconditionname="DeviceAvailable and TaskSelected" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+        </widgets>
+        <messages>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="Uomgv7a2XzKi" textid="TiAIRKAahefI" operation="UpdateRobotPose()" linewidth="none" seqnum="1" usesdiagramusefillcolor="1" x="144" showstereotype="1" y="91" widgetaid="dZAM14isXB9K" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="194" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="oJNRI12gcmVs" height="32" sequencemessagetype="1000" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="149" showstereotype="1" y="72" text="1: UpdateRobotPose()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="139" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="TiAIRKAahefI" height="19" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="Uomgv7a2XzKi" textid="CLxCttmZcR5f" operation="UpdateTaskInfo()" linewidth="none" seqnum="" usesdiagramusefillcolor="1" x="144" showstereotype="1" y="137" widgetaid="dZAM14isXB9K" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="194" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="FQQd4qK1EfrC" height="32" sequencemessagetype="1000" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="149" showstereotype="1" y="118" text=": UpdateTaskInfo()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="118" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="CLxCttmZcR5f" height="19" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="Uomgv7a2XzKi" textid="YQuORtJW4X9O" operation="SelectTask()" linewidth="none" seqnum="" usesdiagramusefillcolor="1" x="331" showstereotype="1" y="233" widgetaid="2avZglfY3fr2" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="144" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="1HNmBQcEzYj1" height="8" sequencemessagetype="1001" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="336" showstereotype="1" y="214" text=": SelectTask()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="88" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="YQuORtJW4X9O" height="19" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="Uomgv7a2XzKi" textid="ZIqvLTYmoNZl" operation="CheckDeviceState()" linewidth="none" seqnum="" usesdiagramusefillcolor="1" x="322" showstereotype="1" y="179" widgetaid="FwbkvIYQrNpv" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="313" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="gPZZj3dECzRF" height="32" sequencemessagetype="1000" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="492" showstereotype="1" y="160" text=": CheckDeviceState()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="135" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="ZIqvLTYmoNZl" height="19" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="FwbkvIYQrNpv" textid="8aVUKT2JQzUu" operation="DoingTask()" linewidth="none" seqnum="" usesdiagramusefillcolor="1" x="633" showstereotype="1" y="258" widgetaid="FwbkvIYQrNpv" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="50" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="IIw3eHIhOVsB" height="32" sequencemessagetype="1000" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="638" showstereotype="1" y="239" text=": DoingTask()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="705" width="86" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="8aVUKT2JQzUu" height="19" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="Uomgv7a2XzKi" textid="2ZOeTPmWk2ta" operation="UpdateTaskStatus()" linewidth="none" seqnum="" usesdiagramusefillcolor="1" x="322" showstereotype="1" y="261" widgetaid="FwbkvIYQrNpv" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="313" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="RgaGLSVxmeqb" height="32" sequencemessagetype="1000" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="496" showstereotype="1" y="242" text=": UpdateTaskStatus()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="134" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="2ZOeTPmWk2ta" height="19" />
+         </messagewidget>
+        </messages>
+        <associations/>
+       </diagram>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="DeviceController state" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="0NZesSpI7aWL" documentation="" showscope="1" snapgrid="0" showatts="1" type="5" >
+        <widgets>
+         <statewidget width="117" showstereotype="1" x="207" y="76" usesdiagramusefillcolor="1" statename="DeviceAvailable" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="31" linecolor="none" xmi.id="d7qRNvzrHN8D" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <statewidget width="105" showstereotype="1" x="412" y="28" usesdiagramusefillcolor="1" statename="DeviceMoving" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="qNjos7Vc5OR4" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <statewidget width="93" showstereotype="1" x="430" y="191" usesdiagramusefillcolor="1" statename="DeviceIdle" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="oglc58Y4ynP6" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <statewidget width="10" showstereotype="1" x="120" y="86" usesdiagramusefillcolor="1" statename="State" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="10" linecolor="none" xmi.id="lExOH3uM1fj8" statetype="0" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <statewidget width="160" showstereotype="1" x="115" y="194" usesdiagramusefillcolor="1" statename="DeviceNotResponding" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="b6mK1AVZe3XD" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="149" showstereotype="1" y="65" text="l2ping OK" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="67" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="chGW1H9kNl1D" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="126" showstereotype="1" y="166" text="l2ping failed" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="82" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="g36QL8YqfDuA" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="255" showstereotype="1" y="128" text="l2ping OK" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="67" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="O7RnK3SaYRph" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="317" showstereotype="1" y="16" text="task selected" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="87" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="g36QL8YqfDuA" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="292" showstereotype="1" y="175" text="l2ping failed" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="82" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="g36QL8YqfDuA" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="333" showstereotype="1" y="148" text="pose unavailable or at task" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="169" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="QhoyFFouPzNZ" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="516" showstereotype="1" y="167" text="pose unavailable or inside task radius" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="233" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="FlSA3uQUtVY7" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="233" showstereotype="1" y="3" text="l2ping OK" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="67" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="chGW1H9kNl1D" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="488" showstereotype="1" y="56" text="away from task/ task pending" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="187" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="u2nzrhHuPRK2" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="397" showstereotype="1" y="59" text="pose available" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="92" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="FlSA3uQUtVY7" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="359" showstereotype="1" y="162" text="or task not timed out" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="136" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="4FbsCQXRKvtc" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="338" showstereotype="1" y="104" text="task timed out" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="96" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="ucJjWMjhEYCQ" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="448" showstereotype="1" y="12" text="task randomwalk(RW) pending" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="195" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="W88senOecUop" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="317" showstereotype="1" y="48" text="task  timed out" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="100" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="EPnjXNGfW8HJ" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="76" showstereotype="1" y="289" text="Step Functions for State Transitions:" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="225" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="2QukzWpHtTzV" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="87" showstereotype="1" y="317" text="DeviceNotResponding: Isl2pingOK()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="222" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="DCGhMg6TmAf0" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="89" showstereotype="1" y="340" text="DeviceAvaialable: Isl2pingOK(), IsTaskSelected()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="295" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="DCGhMg6TmAf0" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="87" showstereotype="1" y="363" text="DeviceMoving: Isl2pingOK(), IsTaskPending(), IsTaskTimedOut(), IsPoseAvailable(), IsAtTask()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="561" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="DCGhMg6TmAf0" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="87" showstereotype="1" y="385" text="DeviceIdle: Isl2pingOK(), IsTaskPending(), IsTaskTimedOut(), IsPoseAvailable(), IsAtTask()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="540" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="DCGhMg6TmAf0" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="0" showstereotype="1" y="428" text="RobotTaskStatus{TaskSelector-evt::Selected; DeviceController-evt::Pending(Strated); DC-evt::TimedOut; DC-evt:Done}" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="716" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="PJAjUgkqjR5e" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="332" showstereotype="1" y="76" text="or task (RW) done" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="117" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="xSRQy4sJXGZ1" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="350" showstereotype="1" y="120" text="or task done" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="83" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="lit3mWUoduhe" height="19" />
+        </widgets>
+        <messages/>
+        <associations>
+         <assocwidget indexa="1" indexb="1" visibilityA="0" widgetaid="lExOH3uM1fj8" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="2" changeabilityB="900" widgetbid="d7qRNvzrHN8D" totalcountb="2" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="130" starty="86" />
+           <endpoint endx="207" endy="86" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="2" indexb="3" visibilityA="0" widgetaid="qNjos7Vc5OR4" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="6" changeabilityB="900" widgetbid="oglc58Y4ynP6" totalcountb="5" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="515" starty="53" />
+           <endpoint endx="515" endy="191" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" visibilityA="0" widgetaid="lExOH3uM1fj8" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="2" changeabilityB="900" widgetbid="b6mK1AVZe3XD" totalcountb="6" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="125" starty="96" />
+           <endpoint endx="125" endy="194" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="0" visibilityA="0" widgetaid="d7qRNvzrHN8D" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="2" changeabilityB="900" widgetbid="d7qRNvzrHN8D" totalcountb="0" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="236" starty="76" />
+           <endpoint endx="294" endy="76" />
+           <point x="236" y="26" />
+           <point x="294" y="26" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="3" indexb="2" visibilityA="0" widgetaid="b6mK1AVZe3XD" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="6" changeabilityB="900" widgetbid="d7qRNvzrHN8D" totalcountb="4" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="253" starty="194" />
+           <endpoint endx="253" endy="107" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" visibilityA="0" widgetaid="qNjos7Vc5OR4" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="2" changeabilityB="900" widgetbid="qNjos7Vc5OR4" totalcountb="2" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="438" starty="28" />
+           <endpoint endx="490" endy="28" />
+           <point x="438" y="6" />
+           <point x="491" y="6" />
+           <point x="491" y="22" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="4" visibilityA="0" widgetaid="qNjos7Vc5OR4" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="6" changeabilityB="900" widgetbid="b6mK1AVZe3XD" totalcountb="6" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="412" starty="53" />
+           <endpoint endx="275" endy="194" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="2" visibilityA="0" widgetaid="d7qRNvzrHN8D" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="4" changeabilityB="900" widgetbid="b6mK1AVZe3XD" totalcountb="6" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="207" starty="107" />
+           <endpoint endx="207" endy="194" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" visibilityA="0" widgetaid="oglc58Y4ynP6" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="2" changeabilityB="900" widgetbid="b6mK1AVZe3XD" totalcountb="2" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="430" starty="196" />
+           <endpoint endx="275" endy="196" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" visibilityA="0" widgetaid="d7qRNvzrHN8D" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="4" changeabilityB="900" widgetbid="qNjos7Vc5OR4" totalcountb="2" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="316" starty="76" />
+           <endpoint endx="412" endy="34" />
+           <point x="316" y="34" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="5" indexb="0" visibilityA="0" widgetaid="b6mK1AVZe3XD" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="6" changeabilityB="900" widgetbid="b6mK1AVZe3XD" totalcountb="0" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="155" starty="194" />
+           <endpoint endx="235" endy="194" />
+           <point x="155" y="144" />
+           <point x="235" y="144" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="2" indexb="3" visibilityA="0" widgetaid="oglc58Y4ynP6" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="5" changeabilityB="900" widgetbid="qNjos7Vc5OR4" totalcountb="6" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="434" starty="191" />
+           <endpoint endx="434" endy="53" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="4" indexb="0" visibilityA="0" widgetaid="qNjos7Vc5OR4" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="5" changeabilityB="900" widgetbid="qNjos7Vc5OR4" totalcountb="0" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="438" starty="53" />
+           <endpoint endx="490" endy="53" />
+           <point x="438" y="103" />
+           <point x="490" y="103" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="5" indexb="2" visibilityA="0" widgetaid="qNjos7Vc5OR4" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="6" changeabilityB="900" widgetbid="d7qRNvzrHN8D" totalcountb="4" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="412" starty="53" />
+           <endpoint endx="324" endy="76" />
+           <point x="350" y="69" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="3" visibilityA="0" widgetaid="oglc58Y4ynP6" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="5" changeabilityB="900" widgetbid="d7qRNvzrHN8D" totalcountb="4" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="430" starty="191" />
+           <endpoint endx="324" endy="107" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="4" indexb="0" visibilityA="0" widgetaid="oglc58Y4ynP6" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="5" changeabilityB="900" widgetbid="oglc58Y4ynP6" totalcountb="0" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="453" starty="191" />
+           <endpoint endx="499" endy="191" />
+           <point x="453" y="141" />
+           <point x="499" y="141" />
+          </linepath>
+         </assocwidget>
+        </associations>
+       </diagram>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="TaskSelector states" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="ztyFYVC9i4jC" documentation="" showscope="1" snapgrid="0" showatts="1" type="5" >
+        <widgets>
+         <statewidget width="168" showstereotype="1" x="180" y="114" usesdiagramusefillcolor="1" statename="WaitForTaskInfoUpdate" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="G6Fy8w9ibBBW" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <statewidget width="185" showstereotype="1" x="187" y="31" usesdiagramusefillcolor="1" statename="WaitForRobotPoseUpdate" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="bAGMB58dmoPR" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <statewidget width="103" showstereotype="1" x="322" y="174" usesdiagramusefillcolor="1" statename="SelectingTask" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="hOXdXDCgOgvg" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <statewidget width="212" showstereotype="1" x="183" y="242" usesdiagramusefillcolor="1" statename="WaitForTaskDoneORTimedOut" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="rzQxcAjzZ5As" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <statewidget width="10" showstereotype="1" x="73" y="131" usesdiagramusefillcolor="1" statename="State" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="10" linecolor="none" xmi.id="nRxz5JgzzlUp" statetype="0" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
+          <Activities/>
+         </statewidget>
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="62" showstereotype="1" y="108" text="load with defaults" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="115" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="LoUIOe1NE5W4" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="168" showstereotype="1" y="66" text="task info available" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="115" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="02aPzYUGETGz" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="335" showstereotype="1" y="146" text="robot pose available" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="128" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="iu6kTTh1vvFN" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="343" showstereotype="1" y="211" text="task selected" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="87" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="BCIFDZ3k3FtX" height="19" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="142" showstereotype="1" y="146" text="task done or timed out" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="146" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="nF6reGxMA14d" height="19" />
+        </widgets>
+        <messages/>
+        <associations>
+         <assocwidget indexa="1" indexb="1" visibilityA="0" widgetaid="nRxz5JgzzlUp" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="2" changeabilityB="900" widgetbid="G6Fy8w9ibBBW" totalcountb="2" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="83" starty="131" />
+           <endpoint endx="180" endy="131" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" visibilityA="0" widgetaid="G6Fy8w9ibBBW" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="2" changeabilityB="900" widgetbid="bAGMB58dmoPR" totalcountb="3" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="197" starty="114" />
+           <endpoint endx="197" endy="56" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" visibilityA="0" widgetaid="rzQxcAjzZ5As" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="3" changeabilityB="900" widgetbid="G6Fy8w9ibBBW" totalcountb="2" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="223" starty="242" />
+           <endpoint endx="223" endy="139" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="2" indexb="1" visibilityA="0" widgetaid="bAGMB58dmoPR" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="3" changeabilityB="900" widgetbid="hOXdXDCgOgvg" totalcountb="2" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="372" starty="56" />
+           <endpoint endx="372" endy="174" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="2" visibilityA="0" widgetaid="hOXdXDCgOgvg" visibilityB="0" roleBdoc="" roleAdoc="" linecolor="none" changeabilityA="900" totalcounta="2" changeabilityB="900" widgetbid="rzQxcAjzZ5As" totalcountb="3" type="514" documentation="" linewidth="none" >
+          <linepath>
+           <startpoint startx="373" starty="199" />
+           <endpoint endx="373" endy="242" />
+          </linepath>
+         </assocwidget>
+        </associations>
+       </diagram>
+      </diagrams>
+     </XMI.extension>
+    </UML:Model>
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Use Case View" name="Use Case View" >
+     <UML:Namespace.ownedElement>
+      <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="SigfQgqdVwLV" name="Multi-Robot-Tracker" />
+      <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="sONXm3LQYIl4" name="Epuck-Py-Client" />
+      <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="B6iuy7HUtKpH" name="TaskInfo-Broadcaster" />
+      <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="7UuN4dBY059b" name="DBus-Daemon" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="TnRjFI15aq8b" name="Emits RobotPose signal" />
+      <UML:Dependency visibility="public" isSpecification="false" namespace="Use Case View" supplier="TnRjFI15aq8b" xmi.id="7DidEnlnAWQj" client="SigfQgqdVwLV" name="" />
+      <UML:Dependency visibility="public" isSpecification="false" namespace="Use Case View" supplier="7UuN4dBY059b" xmi.id="n5IyZgfsRqza" client="TnRjFI15aq8b" name="" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ARouW4C9jDTS" name="Catches RobotPose signal" />
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Use Case View" child="SigfQgqdVwLV" xmi.id="vhSoBUyIDBjg" parent="7UuN4dBY059b" name="" />
+      <UML:Dependency visibility="public" isSpecification="false" namespace="Use Case View" supplier="ARouW4C9jDTS" xmi.id="UlnhwWLcjQAh" client="7UuN4dBY059b" name="" />
+      <UML:Dependency visibility="public" isSpecification="false" namespace="Use Case View" supplier="sONXm3LQYIl4" xmi.id="wqddElKeTCfo" client="ARouW4C9jDTS" name="" />
+      <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="GQn2n5icV81g" name="Epuck-Robot" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="1HxzhIQ8YeAU" name="Emits TaskInfo signal" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="jGD72Gt5wVb2" name="Catches TaskInfo signal" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="28vUDXdWLtsP" name="Drives Robot to task or walk randomly" />
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Use Case View" child="sONXm3LQYIl4" xmi.id="NOspgBitnCw7" parent="GQn2n5icV81g" name="" />
+      <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="A5R9xYqoWPeR" name="Shared Memory" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ke7m6juA835g" name="Emits RobotStatus signal" />
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Use Case View" child="sONXm3LQYIl4" xmi.id="aNLlHKeaO3EN" parent="7UuN4dBY059b" name="" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="0bcpU5KGgy4M" name="Catches RobotStatus signal" />
+      <UML:Dependency visibility="public" isSpecification="false" namespace="Use Case View" supplier="B6iuy7HUtKpH" xmi.id="c4jtUUQEsXKJ" client="7UuN4dBY059b" name="" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="rJ89Awe2LhiA" name="Commits RobotStates" />
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Use Case View" child="B6iuy7HUtKpH" xmi.id="IdaQljGsZi23" parent="A5R9xYqoWPeR" name="" />
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Use Case View" child="B6iuy7HUtKpH" xmi.id="aOWezYRQQWzR" parent="A5R9xYqoWPeR" name="" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="6FC6yu035VWm" name="Checkouts RobotStates" />
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Use Case View" child="SigfQgqdVwLV" xmi.id="eAchxrpjLKV1" parent="A5R9xYqoWPeR" name="" />
+      <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Use Case View" child="A5R9xYqoWPeR" xmi.id="Ds9YAdXSVdzW" parent="SigfQgqdVwLV" name="" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="THbUtqWcvYB9" name="Updates RobotPose " />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="gobk5UAJgaXm" name="Catches RobotStatus Signal" />
+      <UML:Dependency visibility="public" isSpecification="false" namespace="Use Case View" supplier="7UuN4dBY059b" xmi.id="vCrWxvy5Eegk" client="B6iuy7HUtKpH" name="" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="vHafg5mAcotd" name="Updates TaskInfo" />
+      <UML:UseCase visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="wtdDacPUO6J7" name="Select Task Using AFM" />
+     </UML:Namespace.ownedElement>
+     <XMI.extension xmi.extender="umbrello" >
+      <diagrams>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="CentralizedCommunication" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="558" canvaswidth="861" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="VVmJjwbEVIyK" documentation="" showscope="1" snapgrid="0" showatts="1" type="2" >
+        <widgets>
+         <actorwidget width="123" showstereotype="1" x="61" y="147" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="60" linecolor="none" xmi.id="SigfQgqdVwLV" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <actorwidget width="104" showstereotype="1" x="286" y="382" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="60" linecolor="none" xmi.id="sONXm3LQYIl4" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <actorwidget width="134" showstereotype="1" x="552" y="19" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="60" linecolor="#ff0000" xmi.id="B6iuy7HUtKpH" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <actorwidget width="95" showstereotype="1" x="422" y="151" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="60" linecolor="none" xmi.id="7UuN4dBY059b" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <usecasewidget width="169" showstereotype="1" x="214" y="156" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="TnRjFI15aq8b" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <usecasewidget width="185" showstereotype="1" x="229" y="251" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="ARouW4C9jDTS" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <actorwidget width="86" showstereotype="1" x="731" y="381" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="60" linecolor="none" xmi.id="GQn2n5icV81g" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <usecasewidget width="152" showstereotype="1" x="386" y="49" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="1HxzhIQ8YeAU" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <usecasewidget width="168" showstereotype="1" x="233" y="284" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="jGD72Gt5wVb2" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <usecasewidget width="270" showstereotype="1" x="422" y="366" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="50" linecolor="#ff0000" xmi.id="28vUDXdWLtsP" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,75,0,0,0,0,0" />
+         <usecasewidget width="182" showstereotype="1" x="417" y="283" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="ke7m6juA835g" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <usecasewidget width="147" showstereotype="1" x="42" y="211" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="50" linecolor="#ff0000" xmi.id="THbUtqWcvYB9" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,75,0,0,0,0,0" />
+         <usecasewidget width="200" showstereotype="1" x="554" y="121" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="50" linecolor="#ff0000" xmi.id="gobk5UAJgaXm" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,5,75,0,0,0,0,0" />
+         <usecasewidget width="126" showstereotype="1" x="640" y="12" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="vHafg5mAcotd" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <usecasewidget width="161" showstereotype="1" x="259" y="449" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="wtdDacPUO6J7" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+        </widgets>
+        <messages/>
+        <associations>
+         <assocwidget indexa="1" indexb="1" widgetaid="SigfQgqdVwLV" linecolor="none" totalcounta="2" xmi.id="vhSoBUyIDBjg" widgetbid="7UuN4dBY059b" totalcountb="2" type="500" linewidth="none" >
+          <linepath>
+           <startpoint startx="184" starty="182" />
+           <endpoint endx="422" endy="182" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" widgetaid="7UuN4dBY059b" linecolor="none" totalcounta="3" xmi.id="UlnhwWLcjQAh" widgetbid="ARouW4C9jDTS" totalcountb="2" type="502" linewidth="none" >
+          <linepath>
+           <startpoint startx="422" starty="211" />
+           <endpoint endx="414" endy="251" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" widgetaid="ARouW4C9jDTS" linecolor="none" totalcounta="2" xmi.id="wqddElKeTCfo" widgetbid="sONXm3LQYIl4" totalcountb="3" type="502" linewidth="none" >
+          <linepath>
+           <startpoint startx="338" starty="301" />
+           <endpoint endx="338" endy="382" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" widgetaid="sONXm3LQYIl4" linecolor="none" totalcounta="2" xmi.id="NOspgBitnCw7" widgetbid="GQn2n5icV81g" totalcountb="2" type="500" linewidth="none" >
+          <linepath>
+           <startpoint startx="390" starty="442" />
+           <endpoint endx="731" endy="417" />
+           <point x="390" y="442" />
+           <point x="413" y="419" />
+           <point x="416" y="417" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="2" indexb="2" widgetaid="sONXm3LQYIl4" linecolor="none" totalcounta="3" xmi.id="aNLlHKeaO3EN" widgetbid="7UuN4dBY059b" totalcountb="3" type="500" linewidth="none" >
+          <linepath>
+           <startpoint startx="362" starty="382" />
+           <endpoint endx="468" endy="211" />
+           <point x="362" y="369" />
+           <point x="361" y="371" />
+           <point x="362" y="369" />
+           <point x="468" y="348" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="1" indexb="1" widgetaid="7UuN4dBY059b" linecolor="none" totalcounta="2" xmi.id="c4jtUUQEsXKJ" widgetbid="B6iuy7HUtKpH" totalcountb="3" type="502" linewidth="none" >
+          <linepath>
+           <startpoint startx="517" starty="151" />
+           <endpoint endx="623" endy="79" />
+           <point x="623" y="110" />
+          </linepath>
+         </assocwidget>
+         <assocwidget indexa="2" indexb="1" widgetaid="B6iuy7HUtKpH" linecolor="none" totalcounta="3" xmi.id="vCrWxvy5Eegk" widgetbid="7UuN4dBY059b" totalcountb="2" type="502" linewidth="none" >
+          <linepath>
+           <startpoint startx="552" starty="79" />
+           <endpoint endx="474" endy="151" />
+           <point x="474" y="114" />
+          </linepath>
+         </assocwidget>
+        </associations>
+       </diagram>
+      </diagrams>
+     </XMI.extension>
+    </UML:Model>
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Component View" name="Component View" >
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Deployment View" name="Deployment View" >
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Entity Relationship Model" name="Entity Relationship Model" >
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+   </UML:Namespace.ownedElement>
+  </UML:Model>
+ </XMI.content>
+ <XMI.extensions xmi.extender="umbrello" >
+  <docsettings viewid="VVmJjwbEVIyK" uniqueid="wtdDacPUO6J7" documentation="" />
+  <listview>
+   <listitem open="1" type="800" label="Views" >
+    <listitem open="1" type="801" id="Logical View" >
+     <listitem open="0" type="807" id="nDH1Tu7AqVEQ" label="EpuckPyClient" />
+     <listitem open="0" type="808" id="0NZesSpI7aWL" label="DeviceController state" />
+     <listitem open="0" type="808" id="ztyFYVC9i4jC" label="TaskSelector states" />
+     <listitem open="0" type="809" id="nCcrSKp2lifh" label="Centralized Task Performance" />
+     <listitem open="0" type="810" id="kMc29fopIVu0" label="Centralized Task Seq" />
+     <listitem open="1" type="813" id="BNxLLcMHT7KW" >
+      <listitem open="1" type="815" id="tUS5qu9VY9hZ" />
+     </listitem>
+     <listitem open="1" type="813" id="5ZfQW0j6K1ZS" />
+     <listitem open="1" type="813" id="DtX1hqVboO4R" >
+      <listitem open="0" type="814" id="scoCHDoryoMP" />
+      <listitem open="0" type="814" id="IBAp3mbE1o0q" />
+      <listitem open="1" type="814" id="E67SfMxGs8iX" />
+      <listitem open="1" type="814" id="sHtQbr4WJ4TU" />
+      <listitem open="1" type="814" id="WJsyEDGX7H9M" />
+     </listitem>
+     <listitem open="1" type="813" id="nGAIUbjkpAUr" />
+     <listitem open="1" type="813" id="czO7Jt4efcuo" />
+     <listitem open="1" type="813" id="kNPVDEnb2T79" />
+     <listitem open="1" type="813" id="wMmx2UTPm6wb" />
+     <listitem open="0" type="830" id="Datatypes" >
+      <listitem open="1" type="829" id="HjZScM0FLYiV" />
+      <listitem open="1" type="829" id="HTbwb4MFsqAr" />
+      <listitem open="1" type="829" id="UKKmGxSgHYv9" />
+      <listitem open="1" type="829" id="nj3N1mvRMHRb" />
+      <listitem open="1" type="829" id="3nlILfPc60Wi" />
+      <listitem open="1" type="829" id="N7BaBWndq6N5" />
+      <listitem open="1" type="829" id="fqUxyYxMD3LF" />
+      <listitem open="1" type="829" id="SPvHTIMW65nP" />
+      <listitem open="1" type="829" id="axJ3VxuPwCfj" />
+      <listitem open="1" type="829" id="sMzg4XpsHsDI" />
+      <listitem open="1" type="829" id="3svvh5k4AwcJ" />
+      <listitem open="1" type="829" id="2xONNVNoNPS9" />
+      <listitem open="1" type="829" id="w1KHpghFpkaB" />
+      <listitem open="1" type="829" id="kC0pBUXELQ72" />
+      <listitem open="1" type="829" id="6r1AvoadzYSA" />
+      <listitem open="1" type="829" id="Ts4doevE1qVV" />
+     </listitem>
+    </listitem>
+    <listitem open="1" type="802" id="Use Case View" >
+     <listitem open="0" type="805" id="VVmJjwbEVIyK" label="CentralizedCommunication" />
+     <listitem open="1" type="811" id="7UuN4dBY059b" />
+     <listitem open="1" type="811" id="sONXm3LQYIl4" />
+     <listitem open="1" type="811" id="GQn2n5icV81g" />
+     <listitem open="1" type="811" id="SigfQgqdVwLV" />
+     <listitem open="1" type="811" id="B6iuy7HUtKpH" />
+     <listitem open="1" type="811" id="A5R9xYqoWPeR" />
+     <listitem open="1" type="812" id="ARouW4C9jDTS" />
+     <listitem open="1" type="812" id="gobk5UAJgaXm" />
+     <listitem open="1" type="812" id="0bcpU5KGgy4M" />
+     <listitem open="1" type="812" id="jGD72Gt5wVb2" />
+     <listitem open="1" type="812" id="6FC6yu035VWm" />
+     <listitem open="1" type="812" id="rJ89Awe2LhiA" />
+     <listitem open="1" type="812" id="28vUDXdWLtsP" />
+     <listitem open="1" type="812" id="TnRjFI15aq8b" />
+     <listitem open="1" type="812" id="ke7m6juA835g" />
+     <listitem open="1" type="812" id="1HxzhIQ8YeAU" />
+     <listitem open="1" type="812" id="wtdDacPUO6J7" />
+     <listitem open="1" type="812" id="THbUtqWcvYB9" />
+     <listitem open="1" type="812" id="vHafg5mAcotd" />
+    </listitem>
+    <listitem open="1" type="821" id="Component View" />
+    <listitem open="1" type="827" id="Deployment View" />
+    <listitem open="1" type="836" id="Entity Relationship Model" />
+   </listitem>
+  </listview>
+  <codegeneration>
+   <codegenerator language="Python" />
+  </codegeneration>
+ </XMI.extensions>
+</XMI>
