@@ -3,7 +3,7 @@ from math import pi
 USE_NORMALIZED_POSE = True
 POSE_FACTOR = 5
 PROB_SCALE = 100
-
+TASK_SELECTION_STEPS = 20
 
 # DBus  RobotPose Message Protocol
 TASK_INFO_TIME  = 0
@@ -15,6 +15,7 @@ TASK_INFO_URGENCY = 4
 
 #D-Bus Config
 DBUS_IFACE = "uk.ac.newport.ril.RobotTracker"
+DBUS_IFACE_OUT = "uk.ac.newport.ril.EpuckOut"
 DBUS_PATH = "/robot1"
 
 #RIL and AFM params

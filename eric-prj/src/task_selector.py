@@ -119,7 +119,8 @@ class TaskSelector():
                 break
 
     def PostTaskSelection(self):
-        self.datamgr.mSelectedTask = self.selectedTaskid
+        self.datamgr.mSelectedTask.clear()
+        self.datamgr.mSelectedTask['taskid'] = self.selectedTaskid
         self.datamgr.mSelectedTaskAvailable.set()
         self.robot.UpdateTaskRecords(self.selectedTaskid)
     
@@ -135,11 +136,11 @@ def  selector_main(dataManager,  robot):
     ts = TaskSelector(dataManager,  robot)
     ts.datamgr.mRobotPoseAvailable.wait()
     ts.datamgr.mTaskInfoAvailable.wait()
-    for i in range(20):
+    for i in range(TASK_SELECTION_STEPS):
         logger.info("@TS  ----- [Step %d Start ] -----",  i)
         #logger.debug("@TS Robot pose %s:" , dataManager.mRobotPose.items() )
         ts.SelectTask() # can be started delayed
         #ts.PostTaskSelection()
-        time.sleep(2)
-        #dataManager.mTaskDoneOTO.wait() # task done or timedout
+        #time.sleep(60)
+        dataManager.mTaskDoneOTO.wait() # task done or timedout
     

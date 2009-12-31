@@ -1,15 +1,13 @@
 import time, os, sys, sched, subprocess, re, signal, traceback
 import gobject, dbus, dbus.service, dbus.mainloop.glib 
 import multiprocessing,  logging,  logging.config,  logging.handlers
-
 logging.config.fileConfig("logging.conf")
 logger = logging.getLogger("EpcLogger")
-
-#from dbus.introspect_parser import process_introspection_data
-
 from RILSetup import DBUS_IFACE,  DBUS_PATH
 from data_manager import *
 
+
+#--------------------- Signal Reception ----------------------------
 def extract_objects(object_list):
 	list = []
 	for object in object_list:
@@ -66,8 +64,8 @@ def main_loop():
         sys.exit(0)
 
 def client_main(data_mgr,  dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH,\
-                sig1 = "RobotPose",  sig2 = "TaskInfo" ):
-        global datamgr_proxy
+                sig1 = "RobotPose",  sig2 = "TaskInfo",  delay=5 ):
+        global datamgr_proxy,  task_signal
         datamgr_proxy = data_mgr
         dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
         bus = dbus.SessionBus()
