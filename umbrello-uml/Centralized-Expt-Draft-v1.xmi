@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2009-12-31T12:38:39" xmlns:UML="http://schema.omg.org/spec/UML/1.3" >
+<XMI verified="false" xmi.version="1.2" timestamp="2010-01-04T14:30:43" xmlns:UML="http://schema.omg.org/spec/UML/1.3" >
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://uml.sf.net</XMI.exporter>
@@ -57,10 +57,14 @@
       </UML:Class>
       <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="czO7Jt4efcuo" name="RobotPose" />
       <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="kNPVDEnb2T79" name="TaskInfo" />
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="USngR1VzQ9Kw" name="SwisTrack" />
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="CLW5r0Wcevb9" name="DBus-Daemon" />
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="GWWtASUHKUYX" name="Epuck-Py-Client" />
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="RxdRE7y5FOXX" name="TaskInfo-Broadcaster" />
      </UML:Namespace.ownedElement>
      <XMI.extension xmi.extender="umbrello" >
       <diagrams>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="EpuckPyClient" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="nDH1Tu7AqVEQ" documentation="" showscope="1" snapgrid="0" showatts="1" type="1" >
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpackage="1" showstereotype="1" name="EpuckPyClient" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="815" canvaswidth="1136" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="nDH1Tu7AqVEQ" documentation="" showscope="1" snapgrid="0" showatts="1" type="1" >
         <widgets>
          <classwidget linecolor="none" usesdiagramfillcolor="1" linewidth="none" showoperations="1" usesdiagramusefillcolor="1" showpubliconly="1" showpackage="1" x="80" showattsigs="601" showstereotype="1" y="95" showattributes="1" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="123" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="nGAIUbjkpAUr" showscope="1" height="29" showopsigs="601" />
          <classwidget linecolor="none" usesdiagramfillcolor="1" linewidth="none" showoperations="1" usesdiagramusefillcolor="1" showpubliconly="1" showpackage="1" x="271" showattsigs="601" showstereotype="1" y="91" showattributes="1" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="142" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="BNxLLcMHT7KW" showscope="1" height="37" showopsigs="601" />
@@ -71,12 +75,12 @@
         <messages/>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="Centralized Task Performance" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="nCcrSKp2lifh" documentation="" showscope="1" snapgrid="0" showatts="1" type="6" >
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpackage="1" showstereotype="1" name="Centralized Task Performance" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="815" canvaswidth="1136" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="nCcrSKp2lifh" documentation="" showscope="1" snapgrid="0" showatts="1" type="6" >
         <widgets/>
         <messages/>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="Centralized Task Seq" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="2avZglfY3fr2" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="kMc29fopIVu0" documentation="" showscope="1" snapgrid="0" showatts="1" type="3" >
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpackage="1" showstereotype="1" name="Centralized Task Seq" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="815" canvaswidth="1136" localid="2avZglfY3fr2" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="kMc29fopIVu0" documentation="" showscope="1" snapgrid="0" showatts="1" type="3" >
         <widgets>
          <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="75" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="dZAM14isXB9K" width="139" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="BNxLLcMHT7KW" height="25" drawasactor="0" />
          <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="279" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="Uomgv7a2XzKi" width="102" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="DtX1hqVboO4R" height="25" drawasactor="0" />
@@ -107,7 +111,7 @@
         </messages>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="DeviceController state" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="0NZesSpI7aWL" documentation="" showscope="1" snapgrid="0" showatts="1" type="5" >
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpackage="1" showstereotype="1" name="DeviceController state" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="815" canvaswidth="1136" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="0NZesSpI7aWL" documentation="" showscope="1" snapgrid="0" showatts="1" type="5" >
         <widgets>
          <statewidget width="117" showstereotype="1" x="207" y="76" usesdiagramusefillcolor="1" statename="DeviceAvailable" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="31" linecolor="none" xmi.id="d7qRNvzrHN8D" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
           <Activities/>
@@ -260,7 +264,7 @@
          </assocwidget>
         </associations>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="TaskSelector states" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="532" canvaswidth="804" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="ztyFYVC9i4jC" documentation="" showscope="1" snapgrid="0" showatts="1" type="5" >
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpackage="1" showstereotype="1" name="TaskSelector states" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="815" canvaswidth="1136" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="ztyFYVC9i4jC" documentation="" showscope="1" snapgrid="0" showatts="1" type="5" >
         <widgets>
          <statewidget width="168" showstereotype="1" x="180" y="114" usesdiagramusefillcolor="1" statename="WaitForTaskInfoUpdate" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="25" linecolor="none" xmi.id="G6Fy8w9ibBBW" statetype="1" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" >
           <Activities/>
@@ -317,6 +321,50 @@
          </assocwidget>
         </associations>
        </diagram>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpackage="1" showstereotype="1" name="CentralizedExpt seq" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="815" canvaswidth="1014" localid="i25FTnl4W8Nd" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="bXx1YU81XZIC" documentation="" showscope="1" snapgrid="0" showatts="1" type="3" >
+        <widgets>
+         <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="285" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="wqFppWRXgr5Q" width="80" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="USngR1VzQ9Kw" height="26" drawasactor="0" />
+         <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="605" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="u2GCwC0C2qiR" width="107" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="CLW5r0Wcevb9" height="26" drawasactor="0" />
+         <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="766" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="RiXdkNJ9jhQ9" width="116" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="GWWtASUHKUYX" height="26" drawasactor="0" />
+         <objectwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" usesdiagramusefillcolor="1" instancename="" x="415" decon="0" showstereotype="1" y="48" font="DejaVu Sans,9,-1,0,50,0,1,0,0,0" localid="i25FTnl4W8Nd" width="146" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="RxdRE7y5FOXX" height="26" drawasactor="0" />
+         <preconditionwidget width="127" showstereotype="1" x="761" y="160" usesdiagramusefillcolor="1" widgetaid="RiXdkNJ9jhQ9" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="26" linecolor="none" xmi.id="E4lWpn9TpVwn" preconditionname="DeviceAvailable" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <boxwidget width="95" showstereotype="1" x="835" y="189" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="30" linecolor="#000000" xmi.id="Fn71RN6Y4Pit" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="342" showstereotype="1" y="246" text="UpdateTaskUrgency()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="138" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="yyEGFm5bibqe" height="20" />
+         <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="837" showstereotype="1" y="197" text="SelectTask()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="700" width="80" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="yyEGFm5bibqe" height="20" />
+         <boxwidget width="137" showstereotype="1" x="343" y="240" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="32" linecolor="#000000" xmi.id="uys5voH9rHrn" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <notewidget width="107" showstereotype="1" x="439" noteType="0" y="312" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="lal1BuzghwE1" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" text="Repeat 1b" />
+         <notewidget width="104" showstereotype="1" x="270" noteType="0" y="138" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="lal1BuzghwE1" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" text="Repeat 1a" />
+         <notewidget width="110" showstereotype="1" x="782" noteType="0" y="311" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="lal1BuzghwE1" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" text="Repeat 2" />
+         <preconditionwidget width="200" showstereotype="1" x="724" y="241" usesdiagramusefillcolor="1" widgetaid="RiXdkNJ9jhQ9" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="26" linecolor="none" xmi.id="Nk3MZbN428h7" preconditionname="TaskCompletedORTimedOut" usefillcolor="1" documentation="" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+        </widgets>
+        <messages>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="u2GCwC0C2qiR" textid="hGvgxCCMWlzE" operation="EmitTaskInfo()" linewidth="none" seqnum="1b" usesdiagramusefillcolor="1" x="489" showstereotype="1" y="146" widgetaid="i25FTnl4W8Nd" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="168" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="KAVFe3HaWvxB" height="8" sequencemessagetype="1001" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="494" showstereotype="1" y="126" text="1b: EmitTaskInfo()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="118" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="hGvgxCCMWlzE" height="20" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="RiXdkNJ9jhQ9" textid="xbj7vDqvRvIS" operation="ListenRobotPose()" linewidth="none" seqnum="2a" usesdiagramusefillcolor="1" x="659" showstereotype="1" y="95" widgetaid="u2GCwC0C2qiR" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="164" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="RzuiXQcSbJgW" height="8" sequencemessagetype="1001" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="668" showstereotype="1" y="75" text="2a: ListenRobotPose()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="138" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="xbj7vDqvRvIS" height="20" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="RiXdkNJ9jhQ9" textid="xJTSG49L0KBv" operation="ListenTaskInfo()" linewidth="none" seqnum="2b" usesdiagramusefillcolor="1" x="659" showstereotype="1" y="146" widgetaid="u2GCwC0C2qiR" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="164" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="BKt3jqxQNM2p" height="8" sequencemessagetype="1001" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="664" showstereotype="1" y="126" text="2b: ListenTaskInfo()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="126" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="xJTSG49L0KBv" height="20" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="u2GCwC0C2qiR" textid="EpC1I8pVtwUK" operation="EmitSelectedTask()" linewidth="none" seqnum="3" usesdiagramusefillcolor="1" x="659" showstereotype="1" y="222" widgetaid="RiXdkNJ9jhQ9" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="164" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="3s1qxtjAvTgk" height="8" sequencemessagetype="1001" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="664" showstereotype="1" y="202" text="3: EmitSelectedTask()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="139" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="EpC1I8pVtwUK" height="20" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="i25FTnl4W8Nd" textid="1zAmBxwCG41j" operation="ListenSelectedTask()" linewidth="none" seqnum="4" usesdiagramusefillcolor="1" x="489" showstereotype="1" y="224" widgetaid="u2GCwC0C2qiR" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="168" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="OxXFyQEoL6WV" height="8" sequencemessagetype="1001" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="506" showstereotype="1" y="204" text="4: ListenSelectedTask()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="147" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="1zAmBxwCG41j" height="20" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="u2GCwC0C2qiR" textid="dXyhcvwYcs42" operation="EmitTaskCompleted()" linewidth="none" seqnum="5" usesdiagramusefillcolor="1" x="659" showstereotype="1" y="297" widgetaid="RiXdkNJ9jhQ9" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="164" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="Y1VSlf5izFeC" height="8" sequencemessagetype="1001" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="666" showstereotype="1" y="277" text="5: EmitTaskCompleted()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="152" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="dXyhcvwYcs42" height="20" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="i25FTnl4W8Nd" textid="Itg0x2ZWQdYW" operation="ListenTaskCompleted()" linewidth="none" seqnum="6" usesdiagramusefillcolor="1" x="489" showstereotype="1" y="296" widgetaid="u2GCwC0C2qiR" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="168" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="x0mfciZ8ISCL" height="8" sequencemessagetype="1001" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="494" showstereotype="1" y="276" text="6: ListenTaskCompleted()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="160" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="Itg0x2ZWQdYW" height="20" />
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="u2GCwC0C2qiR" textid="YfeGTXsBppr6" operation="EmitRobotPose()" linewidth="none" seqnum="1a" usesdiagramusefillcolor="1" x="325" showstereotype="1" y="94" widgetaid="wqFppWRXgr5Q" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" width="341" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="C5Or2QnTVqyh" height="32" sequencemessagetype="1000" >
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="330" showstereotype="1" y="74" text="1a: EmitRobotPose()" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" pretext="" role="704" width="130" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="YfeGTXsBppr6" height="20" />
+         </messagewidget>
+        </messages>
+        <associations/>
+       </diagram>
       </diagrams>
      </XMI.extension>
     </UML:Model>
@@ -357,7 +405,7 @@
      </UML:Namespace.ownedElement>
      <XMI.extension xmi.extender="umbrello" >
       <diagrams>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="1" showpackage="1" showstereotype="1" name="CentralizedCommunication" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="558" canvaswidth="861" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="VVmJjwbEVIyK" documentation="" showscope="1" snapgrid="0" showatts="1" type="2" >
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpackage="1" showstereotype="1" name="CentralizedCommunication" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="815" canvaswidth="1136" localid="" snapcsgrid="0" showgrid="0" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="VVmJjwbEVIyK" documentation="" showscope="1" snapgrid="0" showatts="1" type="2" >
         <widgets>
          <actorwidget width="123" showstereotype="1" x="61" y="147" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="60" linecolor="none" xmi.id="SigfQgqdVwLV" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
          <actorwidget width="104" showstereotype="1" x="286" y="382" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="60" linecolor="none" xmi.id="sONXm3LQYIl4" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
@@ -368,10 +416,10 @@
          <actorwidget width="86" showstereotype="1" x="731" y="381" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="60" linecolor="none" xmi.id="GQn2n5icV81g" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
          <usecasewidget width="152" showstereotype="1" x="386" y="49" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="1HxzhIQ8YeAU" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
          <usecasewidget width="168" showstereotype="1" x="233" y="284" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="jGD72Gt5wVb2" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
-         <usecasewidget width="270" showstereotype="1" x="422" y="366" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="50" linecolor="#ff0000" xmi.id="28vUDXdWLtsP" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,75,0,0,0,0,0" />
+         <usecasewidget width="270" showstereotype="1" x="422" y="366" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="50" linecolor="#ff0000" xmi.id="28vUDXdWLtsP" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
          <usecasewidget width="182" showstereotype="1" x="417" y="283" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="ke7m6juA835g" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
-         <usecasewidget width="147" showstereotype="1" x="42" y="211" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="50" linecolor="#ff0000" xmi.id="THbUtqWcvYB9" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,75,0,0,0,0,0" />
-         <usecasewidget width="200" showstereotype="1" x="554" y="121" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="50" linecolor="#ff0000" xmi.id="gobk5UAJgaXm" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,5,75,0,0,0,0,0" />
+         <usecasewidget width="147" showstereotype="1" x="42" y="211" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="50" linecolor="#ff0000" xmi.id="THbUtqWcvYB9" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
+         <usecasewidget width="200" showstereotype="1" x="554" y="121" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="50" linecolor="#ff0000" xmi.id="gobk5UAJgaXm" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,5,50,0,0,0,0,0" />
          <usecasewidget width="126" showstereotype="1" x="640" y="12" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="vHafg5mAcotd" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
          <usecasewidget width="161" showstereotype="1" x="259" y="449" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="50" linecolor="none" xmi.id="wtdDacPUO6J7" usefillcolor="1" linewidth="none" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" />
         </widgets>
@@ -446,7 +494,7 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello" >
-  <docsettings viewid="VVmJjwbEVIyK" uniqueid="wtdDacPUO6J7" documentation="" />
+  <docsettings viewid="bXx1YU81XZIC" uniqueid="YfeGTXsBppr6" documentation="" />
   <listview>
    <listitem open="1" type="800" label="Views" >
     <listitem open="1" type="801" id="Logical View" >
@@ -455,6 +503,8 @@
      <listitem open="0" type="808" id="ztyFYVC9i4jC" label="TaskSelector states" />
      <listitem open="0" type="809" id="nCcrSKp2lifh" label="Centralized Task Performance" />
      <listitem open="0" type="810" id="kMc29fopIVu0" label="Centralized Task Seq" />
+     <listitem open="0" type="810" id="bXx1YU81XZIC" label="CentralizedExpt seq" />
+     <listitem open="1" type="813" id="CLW5r0Wcevb9" />
      <listitem open="1" type="813" id="BNxLLcMHT7KW" >
       <listitem open="1" type="815" id="tUS5qu9VY9hZ" />
      </listitem>
@@ -467,8 +517,11 @@
       <listitem open="1" type="814" id="WJsyEDGX7H9M" />
      </listitem>
      <listitem open="1" type="813" id="nGAIUbjkpAUr" />
+     <listitem open="1" type="813" id="GWWtASUHKUYX" />
      <listitem open="1" type="813" id="czO7Jt4efcuo" />
+     <listitem open="1" type="813" id="USngR1VzQ9Kw" />
      <listitem open="1" type="813" id="kNPVDEnb2T79" />
+     <listitem open="1" type="813" id="RxdRE7y5FOXX" />
      <listitem open="1" type="813" id="wMmx2UTPm6wb" />
      <listitem open="0" type="830" id="Datatypes" >
       <listitem open="1" type="829" id="HjZScM0FLYiV" />
@@ -495,8 +548,8 @@
      <listitem open="1" type="811" id="sONXm3LQYIl4" />
      <listitem open="1" type="811" id="GQn2n5icV81g" />
      <listitem open="1" type="811" id="SigfQgqdVwLV" />
-     <listitem open="1" type="811" id="B6iuy7HUtKpH" />
      <listitem open="1" type="811" id="A5R9xYqoWPeR" />
+     <listitem open="1" type="811" id="B6iuy7HUtKpH" />
      <listitem open="1" type="812" id="ARouW4C9jDTS" />
      <listitem open="1" type="812" id="gobk5UAJgaXm" />
      <listitem open="1" type="812" id="0bcpU5KGgy4M" />
