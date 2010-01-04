@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MultiProject SYSTEM "MultiProject-4.2.dtd">
+<!-- eric4 multi project file for multi project  centralized-expt-pycode -->
+<!-- Saved: 2010-01-02, 11:19:43 -->
+<!-- Copyright (C) 2010 -->
+<MultiProject version="4.2">
+  <Description>AFM Centralized</Description>
+  <Projects>
+    <Project isMaster="True">
+      <ProjectName>Epuck-Py-Client</ProjectName>
+      <ProjectFile>/home/omar/epuck-py-client/eric-prj/EpuckPyClient.e4p</ProjectFile>
+      <ProjectDescription>Epuck-Py-Client</ProjectDescription>
+    </Project>
+    <Project isMaster="False">
+      <ProjectName>TaskBroadcaster</ProjectName>
+      <ProjectFile>/home/omar/epuck-py-client/eric-prj/task_broadcaster/TaskBroadcaster.e4p</ProjectFile>
+      <ProjectDescription>TaskBroadcaster</ProjectDescription>
+    </Project>
+  </Projects>
+</MultiProject>

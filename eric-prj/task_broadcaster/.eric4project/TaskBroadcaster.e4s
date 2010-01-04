@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Session SYSTEM "Session-4.3.dtd">
+<!-- eric4 session file for project TaskBroadcaster -->
+<!-- This file was generated automatically, do not edit. -->
+<!-- Saved: 2010-01-02, 12:20:49 -->
+<Session version="4.3">
+  <Filenames>
+    <Filename cline="9" cindex="12" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_emitter.py</Filename>
+    <Filename cline="32" cindex="74" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/TaskBroadcasterMain.py</Filename>
+    <Filename cline="4" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/pose.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/shop_task.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/data_manager.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_updater.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/robotstatus_receiver.py</Filename>
+  </Filenames>
+  <ActiveWindow cline="9" cindex="12">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_emitter.py</ActiveWindow>
+  <Breakpoints>
+  </Breakpoints>
+  <Watchexpressions>
+  </Watchexpressions>
+  <DebugInfo>
+    <CommandLine></CommandLine>
+    <WorkingDirectory></WorkingDirectory>
+    <Environment></Environment>
+    <ReportExceptions value="True" />
+    <Exceptions>
+    </Exceptions>
+    <IgnoredExceptions>
+    </IgnoredExceptions>
+    <AutoClearShell value="True" />
+    <TracePython value="False" />
+    <AutoContinue value="True" />
+    <CovexcPattern></CovexcPattern>
+  </DebugInfo>
+  <Bookmarks>
+  </Bookmarks>
+</Session>
