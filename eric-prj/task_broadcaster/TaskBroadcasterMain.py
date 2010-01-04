@@ -14,14 +14,14 @@ import taskinfo_updater
 
 def main():
         logging.debug("--- Start EPC---")
+        updater .start()
         emitter.start()
         receiver.start()
-        updater .start()
         # Ending....
         time.sleep(10)
+        updater.join()
         emitter.join()
         receiver.join()
-        updater.join()
         logging.debug("--- End EPC---")
 
 
@@ -30,12 +30,13 @@ if __name__ == '__main__':
      sig1 = "TaskInfo"
      sig2 = "RobotStatus"
      delay = 3 # interval between signals
-     emitter= multiprocessing.Process(target=taskinfo_emitter.emitter_main,\
-                                name="RIL_dbus_server",  args=(DBUS_IFACE, DBUS_PATH,  sig1,   delay,  ))
-     receiver = multiprocessing.Process(target=robotstatus_receiver.receiver_main,\
-                                name="RIL_dbus_client",  args=(dm,  DBUS_IFACE, DBUS_PATH, sig1,   delay ))
      updater = multiprocessing.Process(target=taskinfo_updater.updater_main,\
                                 name="TaskInfoUpdater",  args=(dm, ))
+     emitter= multiprocessing.Process(target=taskinfo_emitter.emitter_main,\
+                                name="TaskInfoEmitter",  args=(dm,  DBUS_IFACE, DBUS_PATH,  sig1,   delay,  ))
+     receiver = multiprocessing.Process(target=robotstatus_receiver.receiver_main,\
+                                name="RobotStatusReceiver",  args=(dm,  DBUS_IFACE, DBUS_PATH, sig2,   delay ))
+ 
                                                                         
      main()
       
