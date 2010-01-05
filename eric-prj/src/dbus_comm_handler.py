@@ -3,9 +3,8 @@ import gobject, dbus, dbus.service, dbus.mainloop.glib
 import multiprocessing,  logging,  logging.config,  logging.handlers
 logging.config.fileConfig("logging.conf")
 logger = logging.getLogger("EpcLogger")
-from RILSetup import DBUS_IFACE,  DBUS_PATH
+from RILSetup import *
 from data_manager import *
-
 
 #--------------------- Signal Reception ----------------------------
 def extract_objects(object_list):
@@ -14,7 +13,6 @@ def extract_objects(object_list):
 		val = str(object)
 		list.append(eval(val) )
 	return  list
-
 
 def save_pose(pose):
     global datamgr_proxy
@@ -63,15 +61,19 @@ def main_loop():
         pass
         sys.exit(0)
 
-def client_main(data_mgr,  dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH,\
-                sig1 = "RobotPose",  sig2 = "TaskInfo",  delay=5 ):
+def client_main(data_mgr,  dbus_if1= DBUS_IFACE_TRACKER,\
+            dbus_path1 = DBUS_PATH_BASE, dbus_if2= DBUS_IFACE_TASK_SERVER, \
+            dbus_path2 = DBUS_PATH_TASK_SERVER,\
+            sig1 = "RobotPose", sig2 = "TaskInfo",  delay=3 ):
         global datamgr_proxy,  task_signal
         datamgr_proxy = data_mgr
         dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
         bus = dbus.SessionBus()
         try:
-            bus.add_signal_receiver(pose_signal_handler, dbus_interface = DBUS_IFACE, signal_name = sig1)
-            bus.add_signal_receiver(taskinfo_signal_handler, dbus_interface = DBUS_IFACE, signal_name = sig2)
+            bus.add_signal_receiver(pose_signal_handler, dbus_interface =\
+                                     dbus_if1, path= dbus_path1,  signal_name = sig1)
+            bus.add_signal_receiver(taskinfo_signal_handler, dbus_interface =\
+                                     dbus_if2, path= dbus_path2,  signal_name = sig2)
             main_loop()
         except dbus.DBusException:
             traceback.print_exc()

@@ -16,6 +16,7 @@ TASK_INFO_URGENCY = 4
 #D-Bus Config
 DBUS_IFACE = "uk.ac.newport.ril.RobotTracker"
 DBUS_IFACE_OUT = "uk.ac.newport.ril.EpuckOut"
+DBUS_PATH_BASE = "/robot1"
 DBUS_PATH = "/robot1"
 
 #RIL and AFM params

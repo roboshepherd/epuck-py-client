@@ -14,9 +14,11 @@ TASK_INFO_URGENCY = 4
 
 
 #D-Bus Config
-DBUS_IFACE = "uk.ac.newport.ril.RobotTracker"
-DBUS_IFACE_OUT = "uk.ac.newport.ril.EpuckOut"
-DBUS_PATH = "/robot1"
+DBUS_IFACE_TRACKER = "uk.ac.newport.ril.SwisTrack"
+DBUS_IFACE_EPUCK = "uk.ac.newport.ril.Epuck"
+DBUS_PATH_BASE = "/robot"
+DBUS_IFACE_TASK_SERVER = "uk.ac.newport.ril.TaskBroadcaster"
+DBUS_PATH_TASK_SERVER = "/taskserver"
 
 #RIL and AFM params
 MAXSHOPTASK = 3

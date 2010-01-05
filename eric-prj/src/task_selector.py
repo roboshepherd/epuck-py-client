@@ -143,4 +143,3 @@ def  selector_main(dataManager,  robot):
         #ts.PostTaskSelection()
         #time.sleep(60)
         dataManager.mTaskDoneOTO.wait() # task done or timedout
-    

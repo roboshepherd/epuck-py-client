@@ -2,7 +2,7 @@
 import time, os, sys, sched, subprocess, re, signal, traceback
 import gobject, dbus, dbus.service, dbus.mainloop.glib 
 import multiprocessing,  logging
-from RILSetup import DBUS_IFACE_OUT,  DBUS_PATH
+from RILSetup import *
 from data_manager import *
 from utils import *
 
@@ -12,7 +12,7 @@ schedule = sched.scheduler(time.time, time.sleep)
 class TaskStatusSignal(dbus.service.Object):
     def __init__(self, object_path):
         dbus.service.Object.__init__(self, dbus.SessionBus(), object_path)
-    @dbus.service.signal(dbus_interface= DBUS_IFACE_OUT, signature='sis')
+    @dbus.service.signal(dbus_interface= DBUS_IFACE_EPUCK, signature='sis')
     def  TaskStatus(self,  sig,  taskid,  status):
         #logger.info("Emitted %s : Robot %d now %s ",  sig,  taskid,  status)
         #print "Emitted %s : Robot selected task %d now %s "  %(sig,  taskid,  status)
@@ -40,7 +40,7 @@ def emit_task_selected_signal(delay,  sig1):
         #datamgr_proxy.mSelectedTaskAvailable.clear()
 
 
-def server_main(dm,  dbus_iface= DBUS_IFACE_OUT,  dbus_path = DBUS_PATH, \
+def server_main(dm,  dbus_iface= DBUS_IFACE_EPUCK,  dbus_path = DBUS_PATH_BASE, \
                 sig1 = "TaskStatus",   delay = 3):
     dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
     session_bus = dbus.SessionBus()
