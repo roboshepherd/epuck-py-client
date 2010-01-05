@@ -2,7 +2,7 @@ from RILSetup import  *
 from data_manager import *
 from task_info import *
 import multiprocessing,  logging,  logging.config
-import time,  copy
+import time,  copy,  random
 
 logging.config.fileConfig("logging.conf")
 #create logger
@@ -18,13 +18,25 @@ ti.AddTaskInfo(2,  task2.Info())
 ti.AddTaskInfo(3,  task3.Info())
 taskinfo = copy.deepcopy(ti.all)
 
+def GetUrgency(taskid,  urg):
+        global  datamgr_proxy
+        workers = len(datamgr_proxy.mTaskWorkers[taskid])
+        print "Task %d Workers:" %taskid
+        print  datamgr_proxy.mTaskWorkers[taskid]
+        if workers > 0:
+            urgency = urg - workers * DELTA_TASK_URGENCY 
+        else:
+            urgency = urg +  DELTA_TASK_URGENCY 
+        return urgency
+
 def UpdateTaskInfo():
-        global  datamgr_proxy,  taskurg
+        global  datamgr_proxy
         print "DMP ti2 %s" %id(datamgr_proxy.mTaskInfo)
-        taskurg = taskurg - DELTA_TASK_URGENCY 
-        for k, ti  in  datamgr_proxy.mTaskInfo.items():
-            ti[TASK_INFO_URGENCY] =   taskurg
-            datamgr_proxy.mTaskInfo[k] = ti
+        #taskurg = taskurg - DELTA_TASK_URGENCY 
+        for taskid, ti  in  datamgr_proxy.mTaskInfo.items():
+            urg= ti[TASK_INFO_URGENCY] 
+            ti[TASK_INFO_URGENCY] =   GetUrgency(taskid,  urg)
+            datamgr_proxy.mTaskInfo[taskid] = ti
             #print task
         datamgr_proxy.mTaskInfoAvailable.set() 
         print "Updated ti %s" %datamgr_proxy.mTaskInfo
@@ -32,10 +44,13 @@ def UpdateTaskInfo():
 def updater_main(datamgr):
         global datamgr_proxy,  taskurg
         datamgr_proxy = datamgr
+        
         print "DMP ti1 %s" %id(datamgr_proxy.mTaskInfo)
         taskurg = INIT_TASK_URGENCY
         for k,  v in taskinfo.iteritems():
             datamgr_proxy.mTaskInfo[k] =v
+            # simulating task worker signal recv.
+            datamgr_proxy.mTaskWorkers[k] = [random.randint(1, 8)] * (k - 1)
         print "@updater:"
         print datamgr_proxy.mTaskInfo
         datamgr_proxy.mTaskInfoAvailable.set()
