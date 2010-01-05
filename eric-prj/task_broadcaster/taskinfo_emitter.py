@@ -29,10 +29,13 @@ def emit_task_signal(sig1,  inc):
         print "At emit_task_signal():"
         schedule.enter(inc, 0, emit_task_signal, (sig1,  inc)) # re-schedule to repeat this function
         global datamgr_proxy,  task_signal
+        datamgr_proxy.mTaskInfoAvailable.wait()
         taskinfo = datamgr_proxy.mTaskInfo.copy() # use a soft copy
-        logging.debug("TaskInfo@Emitter: %s",  taskinfo)
+        datamgr_proxy.mTaskInfoAvailable.clear()
+        #logging.debug("TaskInfo@Emitter: %s",  taskinfo)
         #print "\tEmitting TaskInfo signal>>> " 
         task_signal.TaskInfo(sig1,  taskinfo)
+        taskinfo = None
 
 
 def emitter_main(datamgr,  dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH, \
