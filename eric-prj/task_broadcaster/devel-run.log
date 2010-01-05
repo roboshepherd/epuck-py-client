@@ -1,1 +1,11 @@
-2010-01-04 23:29:42,529 - root - DEBUG - --- Start EPC---
+2010-01-05 10:45:56,635 - root - DEBUG - --- Start EPC---
+2010-01-05 10:45:56,657 - EpcLogger - DEBUG - DMPu <data_manager.DataManager instance at 0xb74e50ac>
+2010-01-05 10:45:56,657 - EpcLogger - DEBUG - DMPu ti  <class 'multiprocessing.managers.DictProxy'>
+2010-01-05 10:45:56,693 - root - DEBUG - TaskInfo@Emitter: {1: [1262688356.5800281, 900, 1100, 0.0, 0.5], 2: [1262688356.5800281, 1500, 1200, 0.0, 0.5], 3: [1262688356.5800281, 2500, 1800, 0.0, 0.5]}
+2010-01-05 10:45:57,696 - root - DEBUG - TaskInfo@Emitter: {1: [1262688356.5800281, 900, 1100, 0.0, 0.5], 2: [1262688356.5800281, 1500, 1200, 0.0, 0.5], 3: [1262688356.5800281, 2500, 1800, 0.0, 0.5]}
+2010-01-05 10:45:58,697 - root - DEBUG - TaskInfo@Emitter: {1: [1262688356.5800281, 900, 1100, 0.0, 0.5], 2: [1262688356.5800281, 1500, 1200, 0.0, 0.5], 3: [1262688356.5800281, 2500, 1800, 0.0, 0.5]}
+2010-01-05 10:45:59,698 - root - DEBUG - TaskInfo@Emitter: {1: [1262688356.5800281, 900, 1100, 0.0, 0.5], 2: [1262688356.5800281, 1500, 1200, 0.0, 0.5], 3: [1262688356.5800281, 2500, 1800, 0.0, 0.5]}
+2010-01-05 10:46:01,660 - EpcLogger - DEBUG - DMPu <data_manager.DataManager instance at 0xb74e50ac>
+2010-01-05 10:46:01,661 - EpcLogger - DEBUG - DMPu ti  <class 'multiprocessing.managers.DictProxy'>
+2010-01-05 10:46:06,665 - EpcLogger - DEBUG - DMPu <data_manager.DataManager instance at 0xb74e50ac>
+2010-01-05 10:46:06,665 - EpcLogger - DEBUG - DMPu ti  <class 'multiprocessing.managers.DictProxy'>

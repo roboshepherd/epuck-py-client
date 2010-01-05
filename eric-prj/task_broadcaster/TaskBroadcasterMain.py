@@ -29,16 +29,15 @@ if __name__ == '__main__':
      dm = DataManager()
      sig1 = "TaskInfo"
      sig2 = "RobotStatus"
-     delay = 3 # interval between signals
+     delay = 1 # interval between signals
      updater = multiprocessing.Process(target=taskinfo_updater.updater_main,\
                                 name="TaskInfoUpdater",  args=(dm, ))
      emitter= multiprocessing.Process(target=taskinfo_emitter.emitter_main,\
                                 name="TaskInfoEmitter",  args=(dm,  DBUS_IFACE, DBUS_PATH,  sig1,   delay,  ))
      receiver = multiprocessing.Process(target=robotstatus_receiver.receiver_main,\
                                 name="RobotStatusReceiver",  args=(dm,  DBUS_IFACE, DBUS_PATH, sig2,   delay ))
- 
-                                                                        
-     main()
+     main()   
+     
       
 
 
