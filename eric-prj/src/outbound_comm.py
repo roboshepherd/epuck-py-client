@@ -12,8 +12,8 @@ schedule = sched.scheduler(time.time, time.sleep)
 class TaskStatusSignal(dbus.service.Object):
     def __init__(self, object_path):
         dbus.service.Object.__init__(self, dbus.SessionBus(), object_path)
-    @dbus.service.signal(dbus_interface= DBUS_IFACE_EPUCK, signature='sis')
-    def  TaskStatus(self,  sig,  taskid,  status ):
+    @dbus.service.signal(dbus_interface= DBUS_IFACE_EPUCK, signature='sii')
+    def  TaskStatus(self,  sig,  robotid,  taskid):
         #logger.info("Emitted %s : Robot %d now %s ",  sig,  taskid,  status)
         #print "Emitted %s : Robot selected task %d now %s \
         #"  %(sig,  taskid,  status)
@@ -27,13 +27,14 @@ def emit_task_signal(delay,  sig1):
     schedule.enter(delay, 0, emit_task_signal, (delay, sig1  ) )
     try:
         datamgr_proxy.mSelectedTaskAvailable.wait()
+        robotid = datamgr_proxy.mRobotID
         taskdict = datamgr_proxy.mSelectedTask
         datamgr_proxy.mSelectedTaskAvailable.clear()
         for k, v in taskdict.items():
             taskid = eval(str(k))
             status = str(v)
             print "From TaskDict got %i %i"  %(taskid,  status)
-        task_signal.TaskStatus(sig1,  taskid,  status)
+        task_signal.TaskStatus(sig1,  robotid,  taskid)
     except:
         print "Emitting TaskStatus signal failed"
    

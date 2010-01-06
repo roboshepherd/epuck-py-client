@@ -25,7 +25,8 @@ def save_pose(pose):
         datamgr_proxy.mRobotPoseAvailable.set()
         print datamgr_proxy.mRobotPose
         #logger.info("RobotPose-x %f",  datamgr_proxy.mRobotPose[1])
-        logger.info("@DBC RobotPose recvd. len logged: %d" ,  len(datamgr_proxy.mRobotPose))
+        logger.info("@DBC RobotPose recvd. len logged: %d" ,\
+            len(datamgr_proxy.mRobotPose))
     except:
        print "Err in save_pose()"
 
@@ -62,7 +63,8 @@ def main_loop():
         sys.exit(0)
 
 def client_main(data_mgr,  dbus_if1= DBUS_IFACE_TRACKER,\
-            dbus_path1 = DBUS_PATH_BASE, dbus_if2= DBUS_IFACE_TASK_SERVER, \
+            dbus_path1 = DBUS_PATH_BASE,\
+            dbus_if2= DBUS_IFACE_TASK_SERVER, \
             dbus_path2 = DBUS_PATH_TASK_SERVER,\
             sig1 = "RobotPose", sig2 = "TaskInfo",  delay=3 ):
         global datamgr_proxy,  task_signal

@@ -10,7 +10,8 @@ class DataManager:
         self.mTaskInfo = self.mgr.dict() 
         # key: taskid, value: list of attrib (t.s., x, y,  phi)
         self.mTaskInfoAvailable = self.mgr.Event() # set by dbus client
-        self.mSelectedTask = self.mgr.dict()  # Set/Unset by TaskSelector
+        self.mSelectedTask = self.mgr.dict()  
+        # Set/Unset by TaskSelector, DeviceController
         # key: taskid, val: current status {Selected, Pending, Done, TimedOut}
         self.mSelectedTaskAvailable = self.mgr.Event() 
         # Set/Unset by TaskSelector

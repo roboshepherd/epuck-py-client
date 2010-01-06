@@ -11,7 +11,7 @@ TASK_INFO_X  = 1
 TASK_INFO_Y  = 2
 TASK_INFO_THETA = 3
 TASK_INFO_URGENCY = 4
-TASK_SELECTED = "TaskSelected"
+
 
 
 #D-Bus Config
@@ -20,9 +20,17 @@ DBUS_IFACE_EPUCK = "uk.ac.newport.ril.Epuck"
 DBUS_PATH_BASE = "/robot"
 DBUS_IFACE_TASK_SERVER = "uk.ac.newport.ril.TaskBroadcaster"
 DBUS_PATH_TASK_SERVER = "/taskserver"
+SIG_TASK_STATUS = "TaskStatus"
+SIG_ROBOT_POSE = "RobotPose"
+SIG_TASK_INFO = "TaskInfo"
+# Task Status
+STAT_TASK_SELECTED = "TaskSelected"
+STAT_TASK_PENDING = "TaskPending"
+STAT_TASK_DONE = "TaskDone"
+STAT_TASK_TIMED_OUT = "TaskTimedOut"
 
 #RIL and AFM params
-MAXSHOPTASK = 3
+MAX_SHOPTASK = 3
 INIT_URGENCY = 0.5
 DELTA_URGENCY = 0.01
 DELTA_URGENCY_INC = 0.01
