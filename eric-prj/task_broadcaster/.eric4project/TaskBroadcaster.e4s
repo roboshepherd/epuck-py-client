@@ -2,19 +2,19 @@
 <!DOCTYPE Session SYSTEM "Session-4.3.dtd">
 <!-- eric4 session file for project TaskBroadcaster -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2010-01-05, 21:26:44 -->
+<!-- Saved: 2010-01-06, 12:10:57 -->
 <Session version="4.3">
   <Filenames>
-    <Filename cline="38" cindex="11" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/TaskBroadcasterMain.py</Filename>
     <Filename cline="56" cindex="23" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_emitter.py</Filename>
+    <Filename cline="38" cindex="11" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/TaskBroadcasterMain.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/data_manager.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_updater.py</Filename>
     <Filename cline="3" cindex="43" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/robotstatus_receiver.py</Filename>
     <Filename cline="14" cindex="11" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/logging.conf</Filename>
-    <Filename cline="18" cindex="26" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/RILSetup.py</Filename>
+    <Filename cline="16" cindex="32" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/RILSetup.py</Filename>
     <Filename cline="20" cindex="15" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/shop_task.py</Filename>
   </Filenames>
-  <ActiveWindow cline="18" cindex="26">/home/omar/epuck-py-client/eric-prj/task_broadcaster/RILSetup.py</ActiveWindow>
+  <ActiveWindow cline="16" cindex="32">/home/omar/epuck-py-client/eric-prj/task_broadcaster/RILSetup.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchexpressions>

@@ -2,7 +2,7 @@
 import time, os, sys, sched, subprocess, re, signal, traceback
 import gobject, dbus, dbus.service, dbus.mainloop.glib 
 import multiprocessing,  logging,  logging.config
-from RILSetup import DBUS_IFACE,  DBUS_PATH
+from RILSetup import *
 from task_info import *
 from pose import *
 from data_manager import *
@@ -16,7 +16,8 @@ schedule = sched.scheduler(time.time, time.sleep)
 class TaskInfoSignal(dbus.service.Object):
     def __init__(self, object_path):
         dbus.service.Object.__init__(self, dbus.SessionBus(), object_path)
-    @dbus.service.signal(dbus_interface= DBUS_IFACE, signature='sa{iad}')
+    @dbus.service.signal(dbus_interface= DBUS_IFACE_TASK_SERVER,\
+            signature='sa{iad}')
     def TaskInfo(self, sig,  taskinfo):
         # The signal is emitted when this method exits
         print "TaskInfo signal: %s  " % (sig)
@@ -38,15 +39,17 @@ def emit_task_signal(sig1,  inc):
         taskinfo = None
 
 
-def emitter_main(datamgr,  dbus_iface= DBUS_IFACE,  dbus_path = DBUS_PATH, \
-        sig1= "TaskInfo",  delay = 3):
+def emitter_main(datamgr,  dbus_iface= DBUS_IFACE_TASK_SERVER,\
+            dbus_path = DBUS_PATH_TASK_SERVER, \
+            sig1= SIG_TASK_INFO,  delay = 3):
         global task_signal,  datamgr_proxy
         datamgr_proxy = datamgr
         # proceed only after taskinfo is populated
         datamgr_proxy.mTaskInfoAvailable.wait() 
         dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
         session_bus = dbus.SessionBus()
-        print "@Emitter-- TaskInfoAvailable %s" %datamgr_proxy.mTaskInfoAvailable.is_set() 
+        print "@Emitter-- TaskInfoAvailable %s"\
+            %datamgr_proxy.mTaskInfoAvailable.is_set() 
         try:
             name = dbus.service.BusName(dbus_iface, session_bus)
             task_signal = TaskInfoSignal(dbus_path)

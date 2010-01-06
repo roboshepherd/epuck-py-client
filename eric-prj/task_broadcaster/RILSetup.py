@@ -13,16 +13,26 @@ TASK_INFO_THETA = 3
 TASK_INFO_URGENCY = 4
 
 
+
 #D-Bus Config
-DBUS_IFACE = "uk.ac.newport.ril.RobotTracker"
-DBUS_IFACE_OUT = "uk.ac.newport.ril.EpuckOut"
-DBUS_PATH_BASE = "/robot1"
-DBUS_PATH = "/robot1"
+DBUS_IFACE_TRACKER = "uk.ac.newport.ril.SwisTrack"
+DBUS_IFACE_EPUCK = "uk.ac.newport.ril.Epuck"
+DBUS_PATH_BASE = "/robot"
+DBUS_IFACE_TASK_SERVER = "uk.ac.newport.ril.TaskBroadcaster"
+DBUS_PATH_TASK_SERVER = "/taskserver"
+SIG_TASK_STATUS = "TaskStatus"
+SIG_ROBOT_POSE = "RobotPose"
+SIG_TASK_INFO = "TaskInfo"
+# Task Status
+STAT_TASK_SELECTED = "TaskSelected"
+STAT_TASK_PENDING = "TaskPending"
+STAT_TASK_DONE = "TaskDone"
+STAT_TASK_TIMED_OUT = "TaskTimedOut"
 
 #RIL and AFM params
 MAXSHOPTASK = 3
-INIT_TASK_URGENCY = 0.5
-DELTA_TASK_URGENCY = 0.01
+INIT_URGENCY = 0.5
+DELTA_URGENCY = 0.01
 DELTA_URGENCY_INC = 0.01
 DELTA_URGENCY_DEC = 0.1
 INIT_MATERIAL_COUNT = 10

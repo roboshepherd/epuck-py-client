@@ -8,7 +8,8 @@ logging.config.fileConfig("logging.conf")
 #create logger
 logger = logging.getLogger("EpcLogger")
 
-#  Setup Initial Task Info
+#  Setup Initial Task Info 
+# TODO: Change it to reading from a config file
 ti = TaskInfo()
 task1 = ShopTask(id=1,  x=900,  y=1100)
 task2 = ShopTask(id=2,  x=1500,  y=1200)
@@ -18,7 +19,7 @@ ti.AddTaskInfo(2,  task2.Info())
 ti.AddTaskInfo(3,  task3.Info())
 taskinfo = copy.deepcopy(ti.all)
 
-def GetUrgency(taskid,  urg):
+def GetTaskUrgency(taskid,  urg):
         global  datamgr_proxy
         workers = len(datamgr_proxy.mTaskWorkers[taskid])
         print "Task %d Workers:" %taskid
@@ -35,7 +36,7 @@ def UpdateTaskInfo():
         #taskurg = taskurg - DELTA_TASK_URGENCY 
         for taskid, ti  in  datamgr_proxy.mTaskInfo.items():
             urg= ti[TASK_INFO_URGENCY] 
-            ti[TASK_INFO_URGENCY] =   GetUrgency(taskid,  urg)
+            ti[TASK_INFO_URGENCY] =   GetTaskUrgency(taskid,  urg)
             datamgr_proxy.mTaskInfo[taskid] = ti
             #print task
         datamgr_proxy.mTaskInfoAvailable.set() 
@@ -44,7 +45,6 @@ def UpdateTaskInfo():
 def updater_main(datamgr):
         global datamgr_proxy,  taskurg
         datamgr_proxy = datamgr
-        
         print "DMP ti1 %s" %id(datamgr_proxy.mTaskInfo)
         taskurg = INIT_TASK_URGENCY
         for k,  v in taskinfo.iteritems():
@@ -54,10 +54,6 @@ def updater_main(datamgr):
         print "@updater:"
         print datamgr_proxy.mTaskInfo
         datamgr_proxy.mTaskInfoAvailable.set()
-#        for i in range(3):
-#            logger.debug("DMPu %s",  datamgr_proxy)
-#            logger.debug("DMPu ti  %s",  type(datamgr_proxy.mTaskInfo) )
-#            time.sleep(5)
         while True:
             print "@updater:"
             UpdateTaskInfo()

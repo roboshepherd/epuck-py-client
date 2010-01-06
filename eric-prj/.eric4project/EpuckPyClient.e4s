@@ -2,24 +2,24 @@
 <!DOCTYPE Session SYSTEM "Session-4.3.dtd">
 <!-- eric4 session file for project EpuckPyClient -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2010-01-04, 22:53:38 -->
+<!-- Saved: 2010-01-06, 12:09:48 -->
 <Session version="4.3">
   <Filenames>
+    <Filename cline="27" cindex="9" folds="">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</Filename>
     <Filename cline="14" cindex="10" folds="">/home/omar/epuck-py-client/eric-prj/src/logging.conf</Filename>
-    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_emitter.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/TaskBroadcasterMain.py</Filename>
-    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
-    <Filename cline="5" cindex="25" folds="">/home/omar/epuck-py-client/eric-prj/src/RILSetup.py</Filename>
-    <Filename cline="65" cindex="16" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_comm_handler.py</Filename>
+    <Filename cline="15" cindex="8" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
+    <Filename cline="13" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/RILSetup.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_comm_handler.py</Filename>
     <Filename cline="1" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/pose.py</Filename>
-    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/task_selector.py</Filename>
+    <Filename cline="128" cindex="37" folds="">/home/omar/epuck-py-client/eric-prj/src/task_selector.py</Filename>
     <Filename cline="64" cindex="100" folds="">/home/omar/epuck-py-client/eric-prj/src/ril_robot.py</Filename>
     <Filename cline="9" cindex="13" folds="">/home/omar/epuck-py-client/eric-prj/src/utils.py</Filename>
-    <Filename cline="40" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/outbound_comm.py</Filename>
-    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_server.py</Filename>
+    <Filename cline="22" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/outbound_comm.py</Filename>
+    <Filename cline="7" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_server.py</Filename>
   </Filenames>
-  <ActiveWindow cline="0" cindex="0">/home/omar/epuck-py-client/eric-prj/src/task_selector.py</ActiveWindow>
+  <ActiveWindow cline="22" cindex="0">/home/omar/epuck-py-client/eric-prj/src/outbound_comm.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchexpressions>

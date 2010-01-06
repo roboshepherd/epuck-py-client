@@ -103,7 +103,8 @@ class TaskSelector():
          r.end = end
          startup = end + 1
          endsave = end
-         #logger.debug("@TS Task %d prob start: %d  end: %d",  r.id, r.start, r.end )
+         #logger.debug("@TS Task %d prob start: %d  end: %d",  r.id, r.start,
+         # r.end )
          self.taskranges.append(r)
     
     def GetRandomSelection(self):
@@ -120,7 +121,7 @@ class TaskSelector():
 
     def PostTaskSelection(self):
         self.datamgr.mSelectedTask.clear()
-        self.datamgr.mSelectedTask['taskid'] = self.selectedTaskid
+        self.datamgr.mSelectedTask[self.selectedTaskid] = TASK_SELECTED 
         self.datamgr.mSelectedTaskAvailable.set()
         self.robot.UpdateTaskRecords(self.selectedTaskid)
     
@@ -138,7 +139,7 @@ def  selector_main(dataManager,  robot):
     ts.datamgr.mTaskInfoAvailable.wait()
     for i in range(TASK_SELECTION_STEPS):
         logger.info("@TS  ----- [Step %d Start ] -----",  i)
-        #logger.debug("@TS Robot pose %s:" , dataManager.mRobotPose.items() )
+        #logger.debug("@TS Robot pose %s:" ,dataManager.mRobotPose.items() )
         ts.SelectTask() # can be started delayed
         #ts.PostTaskSelection()
         #time.sleep(60)

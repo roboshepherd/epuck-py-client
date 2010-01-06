@@ -11,6 +11,7 @@ TASK_INFO_X  = 1
 TASK_INFO_Y  = 2
 TASK_INFO_THETA = 3
 TASK_INFO_URGENCY = 4
+TASK_SELECTED = "TaskSelected"
 
 
 #D-Bus Config
