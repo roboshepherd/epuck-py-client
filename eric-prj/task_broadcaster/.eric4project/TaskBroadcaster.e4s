@@ -2,21 +2,21 @@
 <!DOCTYPE Session SYSTEM "Session-4.3.dtd">
 <!-- eric4 session file for project TaskBroadcaster -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2010-01-06, 19:20:01 -->
+<!-- Saved: 2010-01-08, 11:13:20 -->
 <Session version="4.3">
   <Filenames>
-    <Filename cline="52" cindex="12" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_emitter.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/TaskBroadcasterMain.py</Filename>
+    <Filename cline="52" cindex="12" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_emitter.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/data_manager.py</Filename>
-    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_updater.py</Filename>
+    <Filename cline="27" cindex="16" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_updater.py</Filename>
     <Filename cline="15" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/robotstatus_receiver.py</Filename>
     <Filename cline="14" cindex="11" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/logging.conf</Filename>
-    <Filename cline="39" cindex="22" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/RILSetup.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/RILSetup.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/shop_task.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/pose.py</Filename>
     <Filename cline="15" cindex="22" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/task_info.py</Filename>
   </Filenames>
-  <ActiveWindow cline="15" cindex="0">/home/omar/epuck-py-client/eric-prj/task_broadcaster/robotstatus_receiver.py</ActiveWindow>
+  <ActiveWindow cline="0" cindex="0">/home/omar/epuck-py-client/eric-prj/task_broadcaster/RILSetup.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchexpressions>

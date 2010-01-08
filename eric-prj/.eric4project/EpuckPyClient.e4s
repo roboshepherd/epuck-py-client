@@ -2,24 +2,25 @@
 <!DOCTYPE Session SYSTEM "Session-4.3.dtd">
 <!-- eric4 session file for project EpuckPyClient -->
 <!-- This file was generated automatically, do not edit. -->
-<!-- Saved: 2010-01-06, 19:21:50 -->
+<!-- Saved: 2010-01-08, 23:18:32 -->
 <Session version="4.3">
   <Filenames>
     <Filename cline="27" cindex="9" folds="">/home/omar/epuck-py-client/eric-prj/src/EpuckPyClient.py</Filename>
     <Filename cline="14" cindex="10" folds="">/home/omar/epuck-py-client/eric-prj/src/logging.conf</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/taskinfo_emitter.py</Filename>
     <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/task_broadcaster/TaskBroadcasterMain.py</Filename>
-    <Filename cline="12" cindex="46" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/data_manager.py</Filename>
     <Filename cline="32" cindex="4" folds="">/home/omar/epuck-py-client/eric-prj/src/RILSetup.py</Filename>
     <Filename cline="54" cindex="1" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_comm_handler.py</Filename>
     <Filename cline="1" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/pose.py</Filename>
     <Filename cline="128" cindex="37" folds="">/home/omar/epuck-py-client/eric-prj/src/task_selector.py</Filename>
     <Filename cline="64" cindex="100" folds="">/home/omar/epuck-py-client/eric-prj/src/ril_robot.py</Filename>
     <Filename cline="9" cindex="13" folds="">/home/omar/epuck-py-client/eric-prj/src/utils.py</Filename>
-    <Filename cline="22" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/outbound_comm.py</Filename>
+    <Filename cline="0" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/outbound_comm.py</Filename>
     <Filename cline="7" cindex="0" folds="">/home/omar/epuck-py-client/eric-prj/src/dbus_server.py</Filename>
+    <Filename cline="148" cindex="16" folds="">/home/omar/epuck-py-client/eric-prj/src/device_controller.py</Filename>
   </Filenames>
-  <ActiveWindow cline="54" cindex="1">/home/omar/epuck-py-client/eric-prj/src/dbus_comm_handler.py</ActiveWindow>
+  <ActiveWindow cline="148" cindex="16">/home/omar/epuck-py-client/eric-prj/src/device_controller.py</ActiveWindow>
   <Breakpoints>
   </Breakpoints>
   <Watchexpressions>

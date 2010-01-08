@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project EpuckPyClient -->
-<!-- Saved: 2009-12-31, 22:04:39 -->
-<!-- Copyright (C) 2009 M O Faruque Sarker, writefaruq@gmail.com -->
+<!-- Saved: 2010-01-08, 23:18:32 -->
+<!-- Copyright (C) 2010 M O Faruque Sarker, writefaruq@gmail.com -->
 <Project version="4.6">
   <Language>en</Language>
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -25,6 +25,7 @@
     <Source>src/utils.py</Source>
     <Source>src/task_selector.py</Source>
     <Source>src/outbound_comm.py</Source>
+    <Source>src/device_controller.py</Source>
   </Sources>
   <Forms>
   </Forms>
