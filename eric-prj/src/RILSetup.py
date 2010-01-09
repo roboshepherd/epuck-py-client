@@ -4,15 +4,20 @@ USE_NORMALIZED_POSE = True
 POSE_FACTOR = 5
 PROB_SCALE = 100
 TASK_SELECTION_STEPS = 20
+RANDOM_WALK_TASK_ID = 0
+TASK_PERIOD = 30 # timeout period
 
-# DBus  RobotPose Message Protocol
+# DBus  Message Protocol
+ROBOT_POSE_X = 'x'
+ROBOT_POSE_Y = 'y'
+ROBOT_POSE_THETA = 'theta'
+ROBOT_POSE_TS = 'ts'
+# TaskInfo list 
 TASK_INFO_TIME  = 0
 TASK_INFO_X  = 1
 TASK_INFO_Y  = 2
 TASK_INFO_THETA = 3
 TASK_INFO_URGENCY = 4
-
-
 
 #D-Bus Config
 DBUS_IFACE_TRACKER = "uk.ac.newport.ril.SwisTrack"
@@ -23,11 +28,20 @@ DBUS_PATH_TASK_SERVER = "/taskserver"
 SIG_TASK_STATUS = "TaskStatus"
 SIG_ROBOT_POSE = "RobotPose"
 SIG_TASK_INFO = "TaskInfo"
+
+# DataManager SelectedTask  Dict keys
+SELECTED_TASK_ID = 'id' # val: TaskID
+SELECTED_TASK_STATUS = 'status' # val: TaskStatus
+SELECTED_TASK_INFO  = 'taskinfo' # val: [x, y, theta]
+SELECTED_TASK_RW = 'rw' # Randomwalk
+
+
 # Task Status
 TASK_SELECTED = "TaskSelected"
 TASK_PENDING = "TaskPending"
 TASK_DONE = "TaskDone"
 TASK_TIMED_OUT = "TaskTimedOut"
+
 
 #RIL and AFM params
 MAX_SHOPTASK = 3

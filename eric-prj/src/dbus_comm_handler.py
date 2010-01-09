@@ -66,7 +66,7 @@ def client_main(data_mgr,  dbus_if1= DBUS_IFACE_TRACKER,\
             dbus_path1 = DBUS_PATH_BASE,\
             dbus_if2= DBUS_IFACE_TASK_SERVER, \
             dbus_path2 = DBUS_PATH_TASK_SERVER,\
-            sig1 = "RobotPose", sig2 = "TaskInfo",  delay=3 ):
+            sig1 = SIG_ROBOT_POSE, sig2 = SIG_TASK_INFO,  delay=3 ):
         global datamgr_proxy,  task_signal
         datamgr_proxy = data_mgr
         dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)

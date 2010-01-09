@@ -1,4 +1,11 @@
-2010-01-05 22:29:31,501 - root - DEBUG - --- Start EPC---
-2010-01-05 22:29:31,643 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
-2010-01-05 22:29:34,621 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
-2010-01-05 22:29:37,622 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2010-01-09 19:04:01,562 - root - DEBUG - --- Start EPC---
+2010-01-09 19:04:04,922 - EpcLogger - INFO - @TS  ----- [Step 0 Start ] -----
+2010-01-09 19:04:04,923 - EpcLogger - INFO - 	Task 1 stimuli 0.893719:
+2010-01-09 19:04:04,923 - EpcLogger - INFO - 	Task 2 stimuli 0.593780:
+2010-01-09 19:04:04,923 - EpcLogger - INFO - 	Task 3 stimuli 0.271857:
+2010-01-09 19:04:04,923 - EpcLogger - INFO - 	 RandomWalk Stimuli: 0.508097
+2010-01-09 19:04:04,924 - EpcLogger - INFO - 	 Select task 2 
+2010-01-09 19:04:04,927 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2010-01-09 19:04:04,927 - EpcLogger - INFO - 	task 2 inc. sensitization:0.110000, timesDone:1
+2010-01-09 19:04:07,938 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4
+2010-01-09 19:04:10,952 - EpcLogger - INFO - @DBC RobotPose recvd. len logged: 4

@@ -1,6 +1,7 @@
 import subprocess
 import re
 import time
+import math
 from data_manager import *
 from RILSetup import *
 
@@ -30,11 +31,15 @@ def process_ping_output(output):
     _packet_loss = ''
 
 class DeviceController():
-    def __init__(self,  dm,  bdaddr):
+    def __init__(self,  dm,  bdaddr,  task_period= TASK_PERIOD):
         self.datamgr_proxy = dm
         self.bdaddr = bdaddr
+        self.task_start = 0
+        self.task_period = task_period
+        # shared status
         self.l2ping_ok = False
         self.task_selected = False
+        self.task_is_rw = False
         self.task_pending = False
         self.task_done = False
         self.task_timedout = False
@@ -55,34 +60,59 @@ class DeviceController():
 
     def TaskSelected(self):
         taskdict = self.datamgr_proxy.mSelectedTask
-        for k, v in taskdict.items():
-            taskid = eval(str(k))
-            status = str(v)
-            #print "From TaskDict got %i %s"  %(taskid,  status)
+        taskid = eval(str(taskdict[SELECTED_TASK_ID]))
+        status = str(taskdict[SELECTED_TASK_STATUS])
+        print "From TaskDict got %i %s"  %(taskid,  status)
         if status is TASK_SELECTED:
             self.task_selected = True
+        if taskid is RANDOM_WALK_TASK_ID:
+            self.task_is_rw = True
         return self.task_selected
+    
+    def RandomWalkTask(self):
+        return self.task_is_rw 
 
     def TaskPending(self):
         if self.task_selected:
             self.task_pending = True
+        if  (not self.ArrivedAtTask()): # <<FixIt: RandomWalking case>>
+            self.task_pending = True
         return self.task_pending
 
     def TaskDone(self):
-        val = False
-        return val
+        ''' Defn1: If Robot reached at Task and task_period passed
+            Defn2: If Task is RW, Robot RW and task_period passed'''
+        return self.task_done
 
     def TaskTimedOut(self):
-        val = False
-        return val
+        now = time.time()
+        elaspsed = now - self.task_start
+        if elasped > self.task_period:
+            self.task_timedout = True
+        return self.task_timedout
 
-    def  AtTask(self):
-        val = False
-        return val
+    def ArrivedAtTask(self):
+        robot_x= self.datamgr_proxy.mRobotPose[ROBOT_POSE_X]
+        robot_y= self.datamgr_proxy.mRobotPose[ROBOT_POSE_Y]
+        st = self.datamgr_proxy.mSelectedTask[SELECTED_TASK_INFO]
+        print "Selected TaskInfo"
+        print st
+        task_x = st[TASK_INFO_X]
+        task_y = st[TASK_INFO_Y]
+        dx = math.fabs(robot_x - task_x)
+        dy = math.fabs(robot_y - task_y)
+        print "ArrivedAtTask(): xdist: %f ydist: %f" %(dx, dy)
+        pxdist = math.sqrt(dx * dx + dy * dy)
+        if (pxdist < TASK_RADIUS) :
+            self.at_task = True
+            print "ArrivedAtTask(): Arrived within radius %.2f !\n" %pxdist
+        return self.at_task
+
 
     def PoseAvailable(self):
-        val = False
-        return val
+        if len(self.datamgr_proxy.mRobotPose) > 0: # <<  Test >>
+            self.pose_available = True
+        return self.pose_available
 
     def RunDeviceUnavailableLoop(self):
         while self.status is DEVICE_NOT_RESPONDING:
@@ -113,12 +143,13 @@ class DeviceController():
     def RunDeviceMovingLoop(self):
         while self.status is DEVICE_MOVING:
             if self.TaskPending():
-                if (not self.PoseAvailable()) or self.AtTask():
+                if (not self.PoseAvailable()) or self.ArrivedAtTask():
                     self.status = DEVICE_IDLE # go out of loop
                     self.RunDeviceIdleLoop()
                     break
                 else :
                     self.status = DEVICE_MOVING # stay in-loop
+                    self.task_start = time.time()
                     # go to navigation routines for MoveToTarget or RandomWalk
             elif self.TaskDone() or self.TaskTimedOut():
                 self.status = DEVICE_AVAILABLE # go out of loop
@@ -126,7 +157,6 @@ class DeviceController():
             elif (not self.L2PingOK()):
                 self.status = DEVICE_NOT_RESPONDING # go out of loop
                 self.RunDeviceUnavailableLoop()
-
 
     def RunDeviceIdleLoop(self):
         while self.status is DEVICE_IDLE:
@@ -143,7 +173,7 @@ class DeviceController():
                 self.status = DEVICE_MOVING # go out of loop
                 self.RunDeviceMovingLoop()
                 break
-            elif self.TaskPending() and ( self.AtTask() or (not self.PoseAvailable())): 
+            elif self.TaskPending() and ( self.ArrivedAtTask() or (not self.PoseAvailable())): 
                 # stay in loop
                 self.status = DEVICE_IDLE
                 time.sleep(SMALL_DELAY)

@@ -4,7 +4,7 @@ from multiprocessing import *
 class DataManager:
     def __init__(self,  id=-1):
         self.mRobotID = id
-        self.mgr = multiprocessing.Manager()
+        self.mgr = Manager()
         self.mRobotPose = self.mgr.dict() # to retrieve last  observed pose
        # key: x, y, theta, time_stamp(ts) val: <values>
         self.mRobotPoseAvailable = self.mgr.Event() # set by dbus client

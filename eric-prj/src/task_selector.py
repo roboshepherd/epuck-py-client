@@ -121,7 +121,17 @@ class TaskSelector():
 
     def PostTaskSelection(self):
         self.datamgr.mSelectedTask.clear()
-        self.datamgr.mSelectedTask[self.selectedTaskid] = TASK_SELECTED 
+        taskid = self.selectedTaskid
+        self.datamgr.mSelectedTask[SELECTED_TASK_ID] = taskid
+        self.datamgr.mSelectedTask[SELECTED_TASK_STATUS] =\
+            TASK_SELECTED
+        if taskid is 0:
+            self.datamgr.mSelectedTask[SELECTED_TASK_RW] = True
+        # Test it>>>>
+        self.datamgr.mSelectedTask[SELECTED_TASK_INFO] =\
+              self.datamgr.mTaskInfo[taskid]
+        #print "<<<Testing Selected TaskInfo>>>"
+        #print self.datamgr.mSelectedTask[SELECTED_TASK_INFO]
         self.datamgr.mSelectedTaskAvailable.set()
         self.robot.UpdateTaskRecords(self.selectedTaskid)
     

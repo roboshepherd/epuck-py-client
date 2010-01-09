@@ -19,14 +19,14 @@ def main():
         logging.debug("--- Start EPC---")
         dbus_server.start()
         dbus_listener.start()
-        #taskselector.start()
-        #dbus_emitter.start()
+        taskselector.start()
+        dbus_emitter.start()
         # Ending....
         time.sleep(10)
         dbus_server.join()
         dbus_listener.join()
-        #taskselector.join()
-        #dbus_emitter.join()
+        taskselector.join()
+        dbus_emitter.join()
         logging.debug("--- End EPC---")
 
 
@@ -35,7 +35,7 @@ if __name__ == '__main__':
      dbus_shared_path = DBUS_PATH_BASE + robotid
      dm = DataManager()
      robot = RILRobot(id=1)
-     robot.InitTaskRecords(MAXSHOPTASK)
+     robot.InitTaskRecords(MAX_SHOPTASK)
      sig1 = "RobotPose"
      sig2 = "TaskInfo"
      sig3 = "RobotTask"

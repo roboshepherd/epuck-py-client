@@ -13,7 +13,8 @@ class TrackerSignal(dbus.service.Object):
     def __init__(self, object_path):
         dbus.service.Object.__init__(self, dbus.SessionBus(), object_path)
         #global taskinfo
-    @dbus.service.signal(dbus_interface= DBUS_IFACE_TRACKER, signature='sa{sd}')
+    @dbus.service.signal(dbus_interface= DBUS_IFACE_TRACKER,\
+            signature='sa{sd}')
     def RobotPose(self, sig,  pose):
         # The signal is emitted when this method exits
         #pass
