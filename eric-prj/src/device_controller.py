@@ -2,6 +2,7 @@ import subprocess
 import re
 import time
 from data_manager import *
+from RILSetup import *
 
 # Device status alias
 DEVICE_NOT_RESPONDING = 0
@@ -18,10 +19,10 @@ def process_ping_output(output):
     global _packet_loss
     pct = re.findall(r"\d\%", output)
     if(pct):
-        print "%loss: ", pct[0]
-    _packet_loss = pct[0]
+        #print "%loss: ", pct[0]
+        _packet_loss = pct[0]
     if (_packet_loss == '0%'):
-        print "Device Alive"
+        #print "Device Alive"
         return True
     if (_packet_loss == '100%' or  (not _packet_loss)): 
         print "Device Dead"
@@ -44,7 +45,7 @@ class DeviceController():
 
     def L2PingOK(self):
         # [CodeMakeup] Check if l2ping exits!
-        cmd = "/usr/bin/l2ping -c " + " 1 " + bdaddr
+        cmd = "/usr/bin/l2ping -c " + " 1 " + self.bdaddr
         subproc = subprocess.Popen([cmd, ],\
             stderr=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
         stdout_value = subproc.communicate()
@@ -53,12 +54,19 @@ class DeviceController():
         return self.l2ping_ok 
 
     def TaskSelected(self):
-        val = False
-        return val
+        taskdict = self.datamgr_proxy.mSelectedTask
+        for k, v in taskdict.items():
+            taskid = eval(str(k))
+            status = str(v)
+            #print "From TaskDict got %i %s"  %(taskid,  status)
+        if status is TASK_SELECTED:
+            self.task_selected = True
+        return self.task_selected
 
     def TaskPending(self):
-        val = False
-        return val
+        if self.task_selected:
+            self.task_pending = True
+        return self.task_pending
 
     def TaskDone(self):
         val = False
@@ -77,13 +85,14 @@ class DeviceController():
         return val
 
     def RunDeviceUnavailableLoop(self):
-        while self.status is DEVICE_UNAVAILABLE:
+        while self.status is DEVICE_NOT_RESPONDING:
             if self.L2PingOK():
                 self.status = DEVICE_AVAILABLE # out loop
+                #print "Switching to RunDeviceAvailableLoop()"
                 self.RunDeviceAvailableLoop()
                 break
             else: 
-                self.status = DEVICE_UNAVAILABLE # stay here in loop
+                self.status = DEVICE_NOT_RESPONDING # stay here in loop
                 time.sleep(SMALL_DELAY)
 
     def RunDeviceAvailableLoop(self):
@@ -92,48 +101,49 @@ class DeviceController():
                 self.status = DEVICE_MOVING
                 self.RunDeviceMovingLoop() # go out of this loop
                 break
-            elif (not L2PingOK()):
-                self.status = DEVICE_UNAVAILABLE
+            elif (not self.L2PingOK()):
+                self.status = DEVICE_NOT_RESPONDING
                 self.RunDeviceUnavailableLoop() # go out of this loop
                 break
             else:
                self.status = DEVICE_AVAILABLE # stay in-loop
+               print "@DEVICE_AVAILABLE loop"
                time.sleep(SMALL_DELAY)
    
     def RunDeviceMovingLoop(self):
         while self.status is DEVICE_MOVING:
-            if TaskPending():
-                self.task_pending = True
-                if (not PoseAvailable()) or AtTask():
+            if self.TaskPending():
+                if (not self.PoseAvailable()) or self.AtTask():
                     self.status = DEVICE_IDLE # go out of loop
                     self.RunDeviceIdleLoop()
                     break
                 else :
                     self.status = DEVICE_MOVING # stay in-loop
                     # go to navigation routines for MoveToTarget or RandomWalk
-            elif TaskDone() or TaskTimedOut():
+            elif self.TaskDone() or self.TaskTimedOut():
                 self.status = DEVICE_AVAILABLE # go out of loop
                 self.RunDeviceAvailableLoop() 
-            elif (not L2PingOK()):
-                self.status = DEVICE_UNAVAILABLE # go out of loop
+            elif (not self.L2PingOK()):
+                self.status = DEVICE_NOT_RESPONDING # go out of loop
                 self.RunDeviceUnavailableLoop()
 
 
     def RunDeviceIdleLoop(self):
         while self.status is DEVICE_IDLE:
-            if not L2PingOK():
-                self.status = DEVICE_UNAVAILABLE # go out of loop
-                RunDeviceUnavailabeLoop()
+            if not self.L2PingOK():
+                self.status = DEVICE_NOT_RESPONDING # go out of loop
+                self.RunDeviceUnavailabeLoop()
                 break
-            elif TaskDone() or TaskTimedOut() or (not TaskPending()):  # FIX
+            elif self.TaskDone() or self.TaskTimedOut() or (not self.TaskPending()):
+                # FIX it
                 self.status = DEVICE_AVAILABLE # go out of loop
-                RunDeviceAvailabeLoop()
+                self.RunDeviceAvailabeLoop()
                 break
-            elif  TaskPending() and PoseAvailable():
+            elif  self.TaskPending() and self.PoseAvailable():
                 self.status = DEVICE_MOVING # go out of loop
-                RunDeviceMovingLoop()
+                self.RunDeviceMovingLoop()
                 break
-            elif TaskPending() and ( AtTask() or (not PoseAvailable())): 
+            elif self.TaskPending() and ( self.AtTask() or (not self.PoseAvailable())): 
                 # stay in loop
                 self.status = DEVICE_IDLE
                 time.sleep(SMALL_DELAY)
@@ -144,7 +154,7 @@ class DeviceController():
         while EXIT_COND:
             self.RunDeviceUnavailableLoop()
 
-
+# CODE++: parse based on robot-id
 def get_config(config_file,  config):
     result = ' '
     f = open(config_file, 'r')
@@ -152,10 +162,6 @@ def get_config(config_file,  config):
     lst = re.split(';', data)
     if (config == 'bdaddr'):
         result = lst[1]
-    if(config == 'port'):
-        result = lst[2]
-    if(config == 'cfgfile'):
-        result = lst[3]
     return result
 
 def controller_main(data_mgr,  config_file):

@@ -33,7 +33,7 @@ def emit_task_signal(delay,  sig1):
         for k, v in taskdict.items():
             taskid = eval(str(k))
             status = str(v)
-            print "From TaskDict got %i %i"  %(taskid,  status)
+            print "From TaskDict got %i %s"  %(taskid,  status)
         task_signal.TaskStatus(sig1,  robotid,  taskid)
     except:
         print "Emitting TaskStatus signal failed"

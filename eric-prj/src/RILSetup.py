@@ -24,10 +24,10 @@ SIG_TASK_STATUS = "TaskStatus"
 SIG_ROBOT_POSE = "RobotPose"
 SIG_TASK_INFO = "TaskInfo"
 # Task Status
-STAT_TASK_SELECTED = "TaskSelected"
-STAT_TASK_PENDING = "TaskPending"
-STAT_TASK_DONE = "TaskDone"
-STAT_TASK_TIMED_OUT = "TaskTimedOut"
+TASK_SELECTED = "TaskSelected"
+TASK_PENDING = "TaskPending"
+TASK_DONE = "TaskDone"
+TASK_TIMED_OUT = "TaskTimedOut"
 
 #RIL and AFM params
 MAX_SHOPTASK = 3
