@@ -77,6 +77,7 @@ class DeviceController():
         if self.task_selected and (not self.task_started):
             self.task_pending = True
             self.task_started = True
+            return self.task_pending
         if  (not self.ArrivedAtTask()): # <<FixIt: RandomWalking case>>
             self.task_pending = True
         return self.task_pending
