@@ -40,6 +40,7 @@ class DeviceController():
         self.l2ping_ok = False
         self.task_selected = False
         self.task_is_rw = False
+        self.task_started = Fasle
         self.task_pending = False
         self.task_done = False
         self.task_timedout = False
@@ -73,8 +74,9 @@ class DeviceController():
         return self.task_is_rw 
 
     def TaskPending(self):
-        if self.task_selected:
+        if self.task_selected and (not self.task_started):
             self.task_pending = True
+            self.task_started = True
         if  (not self.ArrivedAtTask()): # <<FixIt: RandomWalking case>>
             self.task_pending = True
         return self.task_pending
@@ -122,12 +124,14 @@ class DeviceController():
                 self.RunDeviceAvailableLoop()
                 break
             else: 
+                print "@ RunDeviceUnavailableLoop"
                 self.status = DEVICE_NOT_RESPONDING # stay here in loop
                 time.sleep(SMALL_DELAY)
 
     def RunDeviceAvailableLoop(self):
         while self.status is DEVICE_AVAILABLE:
             if self.TaskSelected():
+                self.task_start = time.time()
                 self.status = DEVICE_MOVING
                 self.RunDeviceMovingLoop() # go out of this loop
                 break
@@ -142,21 +146,27 @@ class DeviceController():
    
     def RunDeviceMovingLoop(self):
         while self.status is DEVICE_MOVING:
-            if self.TaskPending():
+            if TaskTimedOut():
+                self.task_done = True
+                self.status = DEVICE_AVAILABLE # go out of loop
+                self.RunDeviceAvailableLoop()
+                break 
+            elif  self.task_is_rw:
+                self.status = DEVICE_MOVING # stay in-loop
+                # do random walking ...
+            elif self.TaskPending():
                 if (not self.PoseAvailable()) or self.ArrivedAtTask():
                     self.status = DEVICE_IDLE # go out of loop
                     self.RunDeviceIdleLoop()
                     break
                 else :
                     self.status = DEVICE_MOVING # stay in-loop
-                    self.task_start = time.time()
-                    # go to navigation routines for MoveToTarget or RandomWalk
-            elif self.TaskDone() or self.TaskTimedOut():
-                self.status = DEVICE_AVAILABLE # go out of loop
-                self.RunDeviceAvailableLoop() 
+                    # go to navigation routines for MoveToTarget
             elif (not self.L2PingOK()):
                 self.status = DEVICE_NOT_RESPONDING # go out of loop
                 self.RunDeviceUnavailableLoop()
+            else:
+                print "@RunDeviceMovingLoop: Unexpected situation "
 
     def RunDeviceIdleLoop(self):
         while self.status is DEVICE_IDLE:
@@ -164,8 +174,7 @@ class DeviceController():
                 self.status = DEVICE_NOT_RESPONDING # go out of loop
                 self.RunDeviceUnavailabeLoop()
                 break
-            elif self.TaskDone() or self.TaskTimedOut() or (not self.TaskPending()):
-                # FIX it
+            elif self.TaskTimedOut():
                 self.status = DEVICE_AVAILABLE # go out of loop
                 self.RunDeviceAvailabeLoop()
                 break
@@ -173,7 +182,7 @@ class DeviceController():
                 self.status = DEVICE_MOVING # go out of loop
                 self.RunDeviceMovingLoop()
                 break
-            elif self.TaskPending() and ( self.ArrivedAtTask() or (not self.PoseAvailable())): 
+            elif self.TaskPending() and self.ArrivedAtTask() : 
                 # stay in loop
                 self.status = DEVICE_IDLE
                 time.sleep(SMALL_DELAY)
